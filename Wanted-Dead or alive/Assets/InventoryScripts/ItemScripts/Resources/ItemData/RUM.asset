@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478593355f2cfc44b84f33643f7e4e00, type: 3}
+  m_Name: RUM
+  m_EditorClassIdentifier: 
+  ID: 11
+  DisplayName: Rum
+  Description: Have a taste of this delicious rum
+  Icon: {fileID: 21300000, guid: b00b5a3bfeb0e7b4b84395e00b64967c, type: 3}
+  MaxStackSize: 64
+  GoldValue: 0
+  ItemPrefab: {fileID: 5157203268249105373, guid: c897a06d8ea0f2d4b836968e3f1bba06, type: 3}
+  itemType: 1
+  hungerRestore: 1
+  thirstRestore: 5
+  weaponDamage: 0
+  weaponRange: 0
+  attackCooldown: 0
+  WeaponInHandPrefab: {fileID: 0}

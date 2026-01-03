@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478593355f2cfc44b84f33643f7e4e00, type: 3}
+  m_Name: Key
+  m_EditorClassIdentifier: 
+  ID: 7
+  DisplayName: Key
+  Description: This is a key. They are often used for opening things
+  Icon: {fileID: 21300000, guid: 7054ec6a8ded5a147b4d42cee9443a58, type: 3}
+  MaxStackSize: 1
+  GoldValue: 0
+  ItemPrefab: {fileID: 0}
+  itemType: 5
+  hungerRestore: 0
+  thirstRestore: 0
+  weaponDamage: 10
+  weaponRange: 2
+  attackCooldown: 0.6
+  WeaponInHandPrefab: {fileID: 0}

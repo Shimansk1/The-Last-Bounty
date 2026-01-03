@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478593355f2cfc44b84f33643f7e4e00, type: 3}
+  m_Name: Flag
+  m_EditorClassIdentifier: 
+  ID: 5
+  DisplayName: Flag
+  Description: Wave your flag
+  Icon: {fileID: 21300000, guid: 5971929988da77a47a59150353dea710, type: 3}
+  MaxStackSize: 64
+  GoldValue: 0
+  ItemPrefab: {fileID: 9056700741089324176, guid: 385d7111bae85b24db9e3fe2485100cd, type: 3}
+  itemType: 5
+  hungerRestore: 0
+  thirstRestore: 0
+  weaponDamage: 0
+  weaponRange: 0
+  attackCooldown: 0
+  WeaponInHandPrefab: {fileID: 0}
