@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.position);
 
         // Debug: uvidíš stav a vzdálenost
-        Debug.Log($"[ENEMY] {name} State={state} Dist={distance:F2} attackR={attackRadius} stopDist={agent.stoppingDistance:F2}");
+        //Debug.Log($"[ENEMY] {name} State={state} Dist={distance:F2} attackR={attackRadius} stopDist={agent.stoppingDistance:F2}");
 
         // Stavové přechody (hysteréze: buffer při opuštění útoku)
         switch (state)
