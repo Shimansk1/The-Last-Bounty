@@ -13,20 +13,17 @@ public class SmartTrain : MonoBehaviour
     [Header("Logika")]
     public bool isStopped = false;
 
-    // Interní promìnné
+    // NOVÉ: Tady bude uložený bod, kam se má vystupovat.
+    // Vagóny si to odsud pøeètou.
+    public Transform currentExitPoint;
+
+    // Interní
     private Transform[] waypoints;
     private int currentPointIndex;
-
-    // Pro zastávky potøebujeme vìdìt, jestli je hráè uvnitø
-    private bool playerOnBoard = false;
-    private CharacterController playerCC; // Jen pro vyhazování na zastávce
-
-    // --- PRO VAGÓNY (Historie) ---
     public List<Vector3> breadcrumbs = new List<Vector3>();
 
     void Start()
     {
-        // Naètení bodù
         if (trackParent != null)
         {
             int childCount = trackParent.childCount;
@@ -34,28 +31,25 @@ public class SmartTrain : MonoBehaviour
             for (int i = 0; i < childCount; i++) waypoints[i] = trackParent.GetChild(i);
         }
 
-        // Startovní pozice
         currentPointIndex = startPointIndex;
         if (waypoints.Length > 0) transform.position = waypoints[currentPointIndex].position;
     }
 
     void Update()
     {
-        // 1. Nahrávání historie pro vagóny
+        // Nahrávání historie
         if (breadcrumbs.Count == 0 || Vector3.Distance(transform.position, breadcrumbs[breadcrumbs.Count - 1]) > 0.1f)
         {
             breadcrumbs.Add(transform.position);
             if (breadcrumbs.Count > 1500) breadcrumbs.RemoveAt(0);
         }
 
-        // --- POKUD VLAK STOJÍ NEBO NEMÁ TRAT, DÁL NEJDEME ---
         if (isStopped || waypoints.Length == 0) return;
 
-        // 2. Jízda Vlaku
+        // Jízda
         Transform targetPoint = waypoints[currentPointIndex];
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
 
-        // Otáèení
         Vector3 direction = targetPoint.position - transform.position;
         if (direction != Vector3.zero)
         {
@@ -63,7 +57,6 @@ public class SmartTrain : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turnSpeed * Time.deltaTime);
         }
 
-        // 3. Dojeli jsme k bodu?
         if (Vector3.Distance(transform.position, targetPoint.position) < 0.2f)
         {
             StationPoint station = targetPoint.GetComponent<StationPoint>();
@@ -89,53 +82,19 @@ public class SmartTrain : MonoBehaviour
     {
         isStopped = true;
 
-        // Vyhození hráèe na zastávce
-        if (playerOnBoard && station.exitPoint != null)
-        {
-            ForceDisembark(station.exitPoint);
-        }
+        // NOVÉ: Øekneme všem, kde je výstup
+        currentExitPoint = station.exitPoint;
+
+        Debug.Log("Zastávka: " + station.stationName);
 
         yield return new WaitForSeconds(station.waitTime);
 
+        Debug.Log("Odjezd...");
+
+        // NOVÉ: Smažeme výstup, protože už jedeme
+        currentExitPoint = null;
         isStopped = false;
+
         GoToNextPoint();
-    }
-
-    // --- JENOM PARENTING (Žádné složité výpoèty) ---
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerOnBoard = true;
-            playerCC = other.GetComponent<CharacterController>();
-            // Tady se stane to kouzlo - hráè se stane dítìtem vlaku
-            other.transform.SetParent(this.transform);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerOnBoard = false;
-            playerCC = null;
-            // Odlepení
-            other.transform.SetParent(null);
-        }
-    }
-
-    void ForceDisembark(Transform exitLocation)
-    {
-        if (playerCC != null)
-        {
-            playerCC.enabled = false; // Vypneme fyziku
-            playerCC.transform.SetParent(null); // Odlepíme
-            playerCC.transform.position = exitLocation.position; // Teleport
-            playerCC.transform.rotation = exitLocation.rotation;
-            playerCC.enabled = true; // Zapneme fyziku
-
-            playerOnBoard = false;
-            playerCC = null;
-        }
     }
 }

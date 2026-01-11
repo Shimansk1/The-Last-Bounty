@@ -9,19 +9,17 @@ public class TrainWagon : MonoBehaviour
     public float turnSpeed = 5f;
     public float lookAheadDistance = 1.0f;
 
-    [Header("Pozice Hráèe")]
+    [Header("Pozice Hráèe ve vlaku")]
     public Vector3 seatPosition = new Vector3(0, 1.1f, 0);
 
     private PlayerMovementScript myScript;
     private GameObject playerObj;
     private bool isRiding = false;
-
-    // NOVÉ: Èasovaè, aby se E nezmáèklo 2x
-    private float exitCooldown = 0f;
+    private float exitCooldown = 0f; // Aby tì to nevyhodilo hned po nástupu
 
     void LateUpdate()
     {
-        // 1. POHYB VAGÓNU (Beze zmìny)
+        // 1. POHYB VAGÓNU
         if (locomotive != null && locomotive.breadcrumbs.Count >= 2)
         {
             Vector3 myPosition = GetPointOnPath(locomotive.breadcrumbs, wagonDistance);
@@ -41,42 +39,37 @@ public class TrainWagon : MonoBehaviour
         // 2. DRŽENÍ HRÁÈE
         if (isRiding && playerObj != null)
         {
-            // Držíme jen pozici (aby neklouzal), ale rotaci necháme volnou (aby se mohl rozhlížet)
             playerObj.transform.localPosition = seatPosition;
+            // Rotaci necháváme volnou pro rozhlížení
         }
 
-        // --- NOVÉ: ODEÈÍTÁNÍ ÈASU ---
-        if (exitCooldown > 0)
-        {
-            exitCooldown -= Time.deltaTime;
-        }
+        // Cooldown
+        if (exitCooldown > 0) exitCooldown -= Time.deltaTime;
 
-        // 3. VÝSTUP NA E (Jen pokud ubìhl èasovaè!)
+        // 3. VÝSTUP NA E
+        // Podmínka: Ubìhl èasovaè A ZÁROVEÒ vlak stojí
         if (isRiding && Input.GetKeyDown(KeyCode.E) && exitCooldown <= 0)
         {
-            UnlockPlayer();
+            if (locomotive.isStopped && locomotive.currentExitPoint != null)
+            {
+                UnlockPlayer();
+            }
+            else
+            {
+                Debug.Log("Vlak jede (nebo není nastaven Exit Point)! Nemùžeš vystoupit.");
+            }
         }
     }
 
     public void LockPlayer(GameObject player)
     {
-        Debug.Log("ZAMYKÁM HRÁÈE...");
         playerObj = player;
         isRiding = true;
+        exitCooldown = 1.0f; // 1 sekunda pauza po nástupu
 
-        // --- NOVÉ: NASTAVÍME ÈASOVAÈ NA 1 VTEØINU ---
-        // Tím zajistíme, že ten samý stisk E tì hned nevyhodí ven
-        exitCooldown = 1.0f;
-
-        // Najdeme a vypneme skript
         myScript = player.GetComponent<PlayerMovementScript>();
-        if (myScript != null)
-        {
-            myScript.enabled = false;
-            Debug.Log("SKRIPT VYPNUT.");
-        }
+        if (myScript != null) myScript.enabled = false;
 
-        // Pøilepíme
         player.transform.SetParent(this.transform);
         player.transform.localPosition = seatPosition;
         player.transform.localRotation = Quaternion.identity;
@@ -85,21 +78,39 @@ public class TrainWagon : MonoBehaviour
     public void UnlockPlayer()
     {
         if (playerObj == null) return;
+
         isRiding = false;
 
+        // Musíme najít CharacterController, abychom ho mohli vypnout
+        CharacterController cc = playerObj.GetComponent<CharacterController>();
+
+        // 1. DÙLEŽITÉ: Vypneme CC pøed teleportem
+        if (cc != null) cc.enabled = false;
+
+        // 2. Odlepíme hráèe
         playerObj.transform.SetParent(null);
 
-        if (myScript != null)
+        // 3. TELEPORT NA ZASTÁVKU
+        if (locomotive.currentExitPoint != null)
         {
-            myScript.enabled = true;
-            Debug.Log("SKRIPT ZAPNUT.");
+            // Teï, když je CC vypnutý, teleport probìhne spolehlivì
+            playerObj.transform.position = locomotive.currentExitPoint.position;
+            playerObj.transform.rotation = locomotive.currentExitPoint.rotation;
         }
+
+        // 4. DÙLEŽITÉ: Zapneme CC zpátky
+        if (cc != null) cc.enabled = true;
+
+        // 5. Zapneme tvùj pohybový skript
+        if (myScript != null) myScript.enabled = true;
 
         playerObj = null;
         myScript = null;
+
+        Debug.Log("Vystoupil jsi na zastávce.");
     }
 
-    // Matematika (Beze zmìny)
+    // Matematika (beze zmìny)
     Vector3 GetPointOnPath(List<Vector3> path, float distanceNeeded)
     {
         float distanceCovered = 0;
