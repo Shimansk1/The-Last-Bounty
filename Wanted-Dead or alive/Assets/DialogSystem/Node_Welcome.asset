@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8539c1127e5b8cb4cb5b35faffb11f0a, type: 3}
   m_Name: Node_Welcome
   m_EditorClassIdentifier: 
-  dialogText: AHOJ CHCES NAKOUPI
+  dialogText: AHOJ CHCES NAKOUPIT
   responses:
   - responseText: ANO
-    nextNode: {fileID: 11400000}
+    nextNode: {fileID: 0}
     triggersShop: 1
     isExit: 0
   - responseText: NE
-    nextNode: {fileID: 11400000}
+    nextNode: {fileID: 0}
     triggersShop: 0
     isExit: 1
   - responseText: NE

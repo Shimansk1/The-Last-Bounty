@@ -53,12 +53,25 @@ public class DialogManager : MonoBehaviour
                 }
                 else if (response.triggersShop)
                 {
+                    // --- OPRAVA ZAÈÍNÁ ZDE ---
+
+                    // 1. Uložíme si odkaz na NPC bokem, než ho CloseDialog vymaže
+                    NPCController shopNPC = currentNPC;
+
+                    // 2. Teï mùžeme bezpeènì zavøít dialog (currentNPC se stane null)
                     CloseDialog();
-                    currentNPC.OpenShop(); // Otevøe obchod
+
+                    // 3. Otevøeme obchod pøes tu naši uloženou promìnnou
+                    if (shopNPC != null)
+                    {
+                        shopNPC.OpenShop();
+                    }
+
+                    // --- OPRAVA KONÈÍ ZDE ---
                 }
                 else if (response.nextNode != null)
                 {
-                    ShowNode(response.nextNode); // Jde na další èást dialogu
+                    ShowNode(response.nextNode);
                 }
             });
         }

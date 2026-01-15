@@ -1,37 +1,42 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic; // Potøeba pro List
 
 public class NPCController : MonoBehaviour, IInteractable
 {
     [Header("Data")]
     public string npcName = "Obchodník";
-    public DialogNode startingDialog; // Sem pøetáhneš ten ScriptableObject
+    public DialogNode startingDialog;
 
-    // ZDE JSEM SMAZAL [Header("Události")], PROTOŽE TO ZPÙSOBOVALO CHYBU
+    [Header("Obchod")]
+    public List<InventoryItemData> shopInventory; // SEM pøetáhneš itemy v Inspectoru
+
     public UnityAction<IInteractable> OnInteractionComplete { get; set; }
 
-    // Implementace tvého interface: Požadujeme kurzor myši
     public bool RequiresCursorLock => true;
 
     public void Interact(Interactor interactor, out bool interactSuccesful)
     {
         interactSuccesful = true;
-
-        // 1. Najdeme DialogManager (UI) a pošleme mu data
-        // Používáme FindObjectOfType pro jistotu, nebo lépe Singleton DialogManager.Instance
         DialogManager.Instance.StartDialog(this, startingDialog);
-
-        Debug.Log($"Mluvíš s {npcName}");
     }
 
     public void EndInteraction()
     {
-        Debug.Log("Konec dialogu");
+        Debug.Log("Konec interakce");
     }
 
-    // Metoda pro otevøení obchodu
+    // TOTO SE ZAVOLÁ Z DIALOG MANAGERU (když klikneš na odpovìï s triggersShop = true)
     public void OpenShop()
     {
         Debug.Log("Otevírám obchod...");
+        if (shopInventory != null && shopInventory.Count > 0)
+        {
+            ShopManager.Instance.OpenShop(shopInventory);
+        }
+        else
+        {
+            Debug.LogWarning("Tohle NPC nic neprodává!");
+        }
     }
 }

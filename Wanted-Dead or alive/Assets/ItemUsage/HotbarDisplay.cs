@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class HotbarDisplay : StaticInventoryDisplay
 {
     private int _maxIndexSize = 9;
@@ -15,64 +15,43 @@ public class HotbarDisplay : StaticInventoryDisplay
     private void Awake()
     {
         _playerControls = new PlayerControls();
-        Debug.Log("HotbarDisplay Awake: PlayerControls initialized");
     }
 
     protected override void Start()
     {
         base.Start();
-        _currentIndex = 0;
-        Debug.Log($"HotbarDisplay Start: Slots array = {(slots != null ? slots.Length : "null")}");
-        if (slots == null || slots.Length == 0)
-        {
-            Debug.LogError("Slots array is null or empty!");
-            return;
-        }
+
+        // Bezpeènostní kontroly...
+        if (slots == null || slots.Length == 0) return;
         _maxIndexSize = slots.Length - 1;
-        Debug.Log($"MaxIndexSize set to: {_maxIndexSize}");
-
-        // Kontrola jednotlivých slotù
-        for (int i = 0; i < slots.Length; i++)
-        {
-            Debug.Log($"Slot {i}: {(slots[i] != null ? "Valid" : "Null")}");
-            if (slots[i] != null)
-            {
-                Debug.Log($"Slot {i} AssignedInventorySlot: {(slots[i].AssignedInventorySlot != null ? "Valid" : "Null")}");
-            }
-        }
-
-        if (slots[_currentIndex] != null)
-        {
-            slots[_currentIndex].ToggleHighlight();
-            Debug.Log($"Initial highlight set on slot {_currentIndex}");
-        }
-        else
-        {
-            Debug.LogError($"Slot at index {_currentIndex} is null!");
-        }
 
         playerNeeds = FindObjectOfType<PlayerNeeds>();
         weaponHandler = FindObjectOfType<WeaponHandler>();
-        Debug.Log($"PlayerNeeds: {(playerNeeds != null ? "Found" : "Not found")}");
-        Debug.Log($"WeaponHandler: {(weaponHandler != null ? "Found" : "Not found")}");
+
+        // Inicializace prvního slotu
+        _currentIndex = 0;
+        slots[_currentIndex].ToggleHighlight();
+
+        // --- TOTO JE NOVÉ: Hned na startu zkontrolujeme, co držíme ---
+        UpdateActiveSlot();
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
         _playerControls.Enable();
-        Debug.Log("HotbarDisplay OnEnable: PlayerControls enabled");
+        // Eventy pro èísla...
+        _playerControls.Player.Hotbar1.performed += ctx => SetIndex(0);
+        _playerControls.Player.Hotbar2.performed += ctx => SetIndex(1);
+        _playerControls.Player.Hotbar3.performed += ctx => SetIndex(2);
+        _playerControls.Player.Hotbar4.performed += ctx => SetIndex(3);
+        _playerControls.Player.Hotbar5.performed += ctx => SetIndex(4);
+        _playerControls.Player.Hotbar6.performed += ctx => SetIndex(5);
+        _playerControls.Player.Hotbar7.performed += ctx => SetIndex(6);
+        _playerControls.Player.Hotbar8.performed += ctx => SetIndex(7);
+        _playerControls.Player.Hotbar9.performed += ctx => SetIndex(8);
+        _playerControls.Player.Hotbar10.performed += ctx => SetIndex(9);
 
-        _playerControls.Player.Hotbar1.performed += Hotbar1;
-        _playerControls.Player.Hotbar2.performed += Hotbar2;
-        _playerControls.Player.Hotbar3.performed += Hotbar3;
-        _playerControls.Player.Hotbar4.performed += Hotbar4;
-        _playerControls.Player.Hotbar5.performed += Hotbar5;
-        _playerControls.Player.Hotbar6.performed += Hotbar6;
-        _playerControls.Player.Hotbar7.performed += Hotbar7;
-        _playerControls.Player.Hotbar8.performed += Hotbar8;
-        _playerControls.Player.Hotbar9.performed += Hotbar9;
-        _playerControls.Player.Hotbar10.performed += Hotbar10;
         _playerControls.Player.UseItem.performed += UseItem;
     }
 
@@ -80,177 +59,109 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         base.OnDisable();
         _playerControls.Disable();
-        Debug.Log("HotbarDisplay OnDisable: PlayerControls disabled");
-
-        _playerControls.Player.Hotbar1.performed -= Hotbar1;
-        _playerControls.Player.Hotbar2.performed -= Hotbar2;
-        _playerControls.Player.Hotbar3.performed -= Hotbar3;
-        _playerControls.Player.Hotbar4.performed -= Hotbar4;
-        _playerControls.Player.Hotbar5.performed -= Hotbar5;
-        _playerControls.Player.Hotbar6.performed -= Hotbar6;
-        _playerControls.Player.Hotbar7.performed -= Hotbar7;
-        _playerControls.Player.Hotbar8.performed -= Hotbar8;
-        _playerControls.Player.Hotbar9.performed -= Hotbar9;
-        _playerControls.Player.Hotbar10.performed -= Hotbar10;
+        // Odhlášení eventù... (zjednodušeno pro pøehlednost, nech tam to svoje)
         _playerControls.Player.UseItem.performed -= UseItem;
     }
-
-    #region Hotbar Select Methods
-    private void Hotbar1(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar1 input detected");
-        SetIndex(0);
-    }
-    private void Hotbar2(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar2 input detected");
-        SetIndex(1);
-    }
-    private void Hotbar3(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar3 input detected");
-        SetIndex(2);
-    }
-    private void Hotbar4(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar4 input detected");
-        SetIndex(3);
-    }
-    private void Hotbar5(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar5 input detected");
-        SetIndex(4);
-    }
-    private void Hotbar6(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar6 input detected");
-        SetIndex(5);
-    }
-    private void Hotbar7(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar7 input detected");
-        SetIndex(6);
-    }
-    private void Hotbar8(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar8 input detected");
-        SetIndex(7);
-    }
-    private void Hotbar9(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar9 input detected");
-        SetIndex(8);
-    }
-    private void Hotbar10(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Hotbar10 input detected");
-        SetIndex(9);
-    }
-    #endregion
 
     private void Update()
     {
         float scroll = _playerControls.Player.MouseWheel.ReadValue<float>();
-        if (scroll != 0)
-        {
-            Debug.Log($"Mouse Wheel input: {scroll}");
-        }
         if (scroll > 0.01f) ChangeIndex(-1);
         if (scroll < -0.01f) ChangeIndex(1);
     }
 
+    // --- NOVÁ METODA: Øeší automatické nasazování vìcí pøi zmìnì slotu ---
+    private void UpdateActiveSlot()
+    {
+        // Pokud nemáme weapon handler, nemáme co øešit
+        if (weaponHandler == null) return;
+
+        // Získáme data ze slotu
+        var currentSlot = slots[_currentIndex].AssignedInventorySlot;
+
+        // Pokud je slot prázdný nebo item je null
+        if (currentSlot == null || currentSlot.ItemData == null)
+        {
+            weaponHandler.UnequipWeapon(); // Nic nedržíme -> odvybavit zbraò
+            return;
+        }
+
+        InventoryItemData item = currentSlot.ItemData;
+
+        // Pokud je to zbraò, automaticky ji nasadíme
+        if (item.itemType == ItemType.Weapon)
+        {
+            weaponHandler.EquipWeapon(item);
+        }
+        else
+        {
+            // Pokud držíme jablko nebo kámen, schováme pistoli
+            weaponHandler.UnequipWeapon();
+        }
+    }
+
+    // Upravená metoda pro zmìnu indexu (koleèko myši)
+    private void ChangeIndex(int direction)
+    {
+        slots[_currentIndex].ToggleHighlight(); // Zhasnout starý
+        _currentIndex += direction;
+
+        if (_currentIndex > _maxIndexSize) _currentIndex = 0;
+        else if (_currentIndex < 0) _currentIndex = _maxIndexSize;
+
+        slots[_currentIndex].ToggleHighlight(); // Rozsvítit nový
+
+        // --- ZAVOLAT UPDATE AKTIVNÍHO ITEMU ---
+        UpdateActiveSlot();
+    }
+
+    // Upravená metoda pro nastavení indexu (klávesy 1-9)
+    private void SetIndex(int newIndex)
+    {
+        slots[_currentIndex].ToggleHighlight(); // Zhasnout starý
+        _currentIndex = Mathf.Clamp(newIndex, 0, _maxIndexSize);
+        slots[_currentIndex].ToggleHighlight(); // Rozsvítit nový
+
+        // --- ZAVOLAT UPDATE AKTIVNÍHO ITEMU ---
+        UpdateActiveSlot();
+    }
+
     private void UseItem(InputAction.CallbackContext obj)
     {
-        Debug.Log($"UseItem called: _currentIndex = {_currentIndex}");
+        // Tady øešíme POUZE konzumaci jídla/pití.
+        // Zbranì už øeší WeaponHandler.Update() a HotbarDisplay.UpdateActiveSlot()
 
-        // Kontrola pole slots
-        if (slots == null || slots.Length == 0)
-        {
-            Debug.LogError("Slots array is null or empty!");
-            return;
-        }
-
-        // Kontrola konkrétního slotu
-        if (slots[_currentIndex] == null)
-        {
-            Debug.LogError($"Slot at index {_currentIndex} is null!");
-            return;
-        }
-
-        // Kontrola AssignedInventorySlot
         var currentSlot = slots[_currentIndex].AssignedInventorySlot;
-        if (currentSlot == null)
-        {
-            Debug.LogError($"AssignedInventorySlot at index {_currentIndex} is null!");
-            return;
-        }
+        if (currentSlot == null || currentSlot.ItemData == null) return;
 
         var item = currentSlot.ItemData;
-        if (item == null)
-        {
-            Debug.Log("No item in current slot");
-            return;
-        }
 
-        Debug.Log($"Using item: {item.name}, Type: {item.itemType}");
         switch (item.itemType)
         {
             case ItemType.Food:
             case ItemType.Drink:
-                if (playerNeeds == null)
+                if (playerNeeds != null)
                 {
-                    Debug.LogError("PlayerNeeds is null!");
-                    return;
+                    item.UseItem(playerNeeds);
+                    currentSlot.RemoveFromStack(1);
+                    slots[_currentIndex].UpdateUISlot();
+
+                    // Pokud jsme snìdli poslední kus, musíme aktualizovat co držíme (aby zmizela tøeba prázdná láhev, kdyby to byl model)
+                    if (currentSlot.StackSize <= 0)
+                    {
+                        UpdateActiveSlot();
+                    }
                 }
-                item.UseItem(playerNeeds);
-                currentSlot.RemoveFromStack(1);
-                slots[_currentIndex].UpdateUISlot();
                 break;
 
+            // CASE WEAPON JSME VYHODILI - Zbraò se "nepoužívá" kliknutím v inventáøi, ale støílí se s ní
             case ItemType.Weapon:
-                if (weaponHandler == null)
-                {
-                    Debug.LogError("WeaponHandler is null!");
-                    return;
-                }
-                weaponHandler.EquipWeapon(item);
+                // Zde nedìláme nic, støelbu øeší WeaponHandler
                 break;
 
             default:
-                Debug.Log("Tento typ itemu zatím neumíme použít.");
+                Debug.Log("Item used (generic)");
                 break;
         }
-    }
-
-    private void ChangeIndex(int direction)
-    {
-        if (slots.Length == 0)
-        {
-            Debug.LogError("Slots array is empty!");
-            return;
-        }
-        Debug.Log($"ChangeIndex: Current = {_currentIndex}, Direction = {direction}");
-        slots[_currentIndex].ToggleHighlight();
-        _currentIndex += direction;
-        if (_currentIndex > _maxIndexSize)
-            _currentIndex = 0;
-        else if (_currentIndex < 0)
-            _currentIndex = _maxIndexSize;
-        slots[_currentIndex].ToggleHighlight();
-        Debug.Log($"New Index: {_currentIndex}");
-    }
-
-    private void SetIndex(int newIndex)
-    {
-        if (slots.Length == 0)
-        {
-            Debug.LogError("Slots array is empty!");
-            return;
-        }
-        Debug.Log($"SetIndex: Old = {_currentIndex}, New = {newIndex}");
-        slots[_currentIndex].ToggleHighlight();
-        _currentIndex = Mathf.Clamp(newIndex, 0, _maxIndexSize);
-        slots[_currentIndex].ToggleHighlight();
-        Debug.Log($"Set Index to: {_currentIndex}");
     }
 }

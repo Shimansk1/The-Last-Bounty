@@ -1,4 +1,4 @@
-Ausing UnityEngine;
+using UnityEngine;
 
 public enum ItemType
 {
