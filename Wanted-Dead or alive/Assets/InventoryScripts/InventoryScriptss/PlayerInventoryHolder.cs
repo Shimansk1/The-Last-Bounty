@@ -61,23 +61,23 @@ public class PlayerInventoryHolder : InventoryHolder
     }
 
     [Header("Ekonomika")]
-    [SerializeField] private int currentGold = 500; // Startovní peníze
-    public int CurrentGold => currentGold;
+    [SerializeField] private int currentMoney = 500; // Startovní peníze
+    public int CurrentMoney => currentMoney;
 
-    public bool SpendGold(int amount)
+    public bool SpendMoney(int amount)
     {
-        if (currentGold >= amount)
+        if (currentMoney >= amount)
         {
-            currentGold -= amount;
-            Debug.Log($"Utraceno {amount} zlata. Zùstatek: {currentGold}");
+            currentMoney -= amount;
+            Debug.Log($"Utraceno {amount} zlata. Zùstatek: {currentMoney}");
             // Tady bys mohl zavolat event pro aktualizaci UI penìz
             return true;
         }
         return false;
     }
 
-    public void AddGold(int amount)
+    public void AddMoney(int amount)
     {
-        currentGold += amount;
+        currentMoney += amount;
     }
 }

@@ -57,16 +57,19 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Quest\WantedPoster.cs" />
+    <Compile Include="Assets\DialogSystem\DialogNode.cs" />
     <Compile Include="Assets\Reputation\ReputationUI.cs" />
     <Compile Include="Assets\Other\ItemSpawner.cs" />
     <Compile Include="Assets\Reputation\ReputationManager.cs" />
+    <Compile Include="Assets\Movement\StationPoint.cs" />
     <Compile Include="Assets\PlayerHealth\PlayerHealth.cs" />
     <Compile Include="Assets\Other\Canteen.cs" />
-    <Compile Include="Assets\PlayerControls.cs" />
+    <Compile Include="Assets\Movement\PlayerControls.cs" />
     <Compile Include="Assets\InventoryScripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Other\BuildRequirement.cs" />
     <Compile Include="Assets\Other\SettingsMenu.cs" />
-    <Compile Include="Assets\PlayerMovementScript.cs" />
+    <Compile Include="Assets\Movement\PlayerMovementScript.cs" />
     <Compile Include="Assets\Other\CraftingRecipe.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\ChestInventory.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventoryHolder.cs" />
@@ -75,13 +78,17 @@
     <Compile Include="Assets\Other\CraftingSystem.cs" />
     <Compile Include="Assets\Other\RainSplashManager.cs" />
     <Compile Include="Assets\SceneManagment\SaveLoadCanvas.cs" />
-    <Compile Include="Assets\InventoryScripts\InventoryScriptss\MouseItemData.cs" />
     <Compile Include="Assets\SaveLoad\SaveData.cs" />
+    <Compile Include="Assets\InventoryScripts\InventoryScriptss\MouseItemData.cs" />
+    <Compile Include="Assets\Quest\WantedQuestTracker.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventorySlot.cs" />
+    <Compile Include="Assets\Movement\HorseInteraction.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\InventorySlot_UI.cs" />
+    <Compile Include="Assets\DialogSystem\DialogManager.cs" />
     <Compile Include="Assets\Other\CanteenUI.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\PlayerInventoryHolder.cs" />
     <Compile Include="Assets\SceneManagment\SceneSwitch.cs" />
+    <Compile Include="Assets\Movement\TrainDoor.cs" />
     <Compile Include="Assets\PlayerHealth\PlayerNeeds.cs" />
     <Compile Include="Assets\InventoryScripts\Interactor.cs" />
     <Compile Include="Assets\PlayerHealth\PlayerUI.cs" />
@@ -92,32 +99,35 @@
     <Compile Include="Assets\Minimap\Minimap.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\InventoryDisplay.cs" />
     <Compile Include="Assets\SaveLoad\SaveGameManager.cs" />
+    <Compile Include="Assets\Movement\SmartTrain.cs" />
     <Compile Include="Assets\ItemUsage\HotbarDisplay.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\DynamicInventoryDisplay.cs" />
     <Compile Include="Assets\Other\BulletMover.cs" />
     <Compile Include="Assets\Other\TutorialManager.cs" />
+    <Compile Include="Assets\DialogSystem\NPCController.cs" />
     <Compile Include="Assets\TransformSaveLoadSystem\SaveGameManageris.cs" />
     <Compile Include="Assets\Other\CoroutineRunner.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\InventoryItemData.cs" />
     <Compile Include="Assets\Combat\EnemyLootDropper.cs" />
+    <Compile Include="Assets\ShopManager.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\ItemPickup.cs" />
     <Compile Include="Assets\SaveLoad\SerializableDictionary.cs" />
     <Compile Include="Assets\Combat\WeaponHandler.cs" />
     <Compile Include="Assets\TransformSaveLoadSystem\PositionSaveScripts\PlayerSaveData.cs" />
     <Compile Include="Assets\SceneManagment\ControlsOpener.cs" />
+    <Compile Include="Assets\Movement\TrainWagon.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\StaticInventoryDisplay.cs" />
     <Compile Include="Assets\SaveLoad\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Combat\EnemyAI.cs" />
     <Compile Include="Assets\Other\CoconutSpawner.cs" />
-    <Compile Include="Assets\MouseLook.cs" />
+    <Compile Include="Assets\Movement\MouseLook.cs" />
     <Compile Include="Assets\Other\RumBarrelInteractable.cs" />
     <Compile Include="Assets\TransformSaveLoadSystem\PositionSaveScripts\SaveGameTester.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\InventoryUIController.cs" />
     <Compile Include="Assets\Combat\EnemyHealth.cs" />
     <Compile Include="Assets\Combat\EnemySpawner.cs" />
-    <Compile Include="Assets\WantedPoster.cs" />
-    <Compile Include="Assets\WantedContract.cs" />
-    <Compile Include="Assets\WantedQuestTracker.cs" />
+    <Compile Include="Assets\Movement\HorseMovement.cs" />
+    <Compile Include="Assets\Quest\WantedContract.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CrystalShader.shader" />
@@ -784,9 +794,6 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -799,9 +806,6 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
@@ -813,9 +817,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -838,20 +839,35 @@
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TerrainTools">
+      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TerrainTools.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

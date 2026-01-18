@@ -11,7 +11,7 @@ public class ShopManager : MonoBehaviour
     public GameObject shopWindow;       // Celý panel obchodu
     public Transform itemsContainer;    // Content ve ScrollView (kam se hází tlaèítka)
     public GameObject itemButtonPrefab; // Obyèejný PREFAB tlaèítka (vysvìtlím níže)
-    public TextMeshProUGUI goldText;    // Text kolik máš penìz
+    public TextMeshProUGUI MoneyText;    // Text kolik máš penìz
 
     private PlayerInventoryHolder playerInventory;
 
@@ -61,7 +61,7 @@ public class ShopManager : MonoBehaviour
             // Najdeme Texty (Jméno a Cena)
             TextMeshProUGUI[] texts = btnObj.GetComponentsInChildren<TextMeshProUGUI>();
             if (texts.Length > 0) texts[0].text = item.DisplayName; // První text je jméno
-            if (texts.Length > 1) texts[1].text = item.GoldValue + " G"; // Druhý text je cena
+            if (texts.Length > 1) texts[1].text = item.MoneyValue + " G"; // Druhý text je cena
 
             // Nastavíme kliknutí
             btn.onClick.AddListener(() => BuyItem(item));
@@ -81,12 +81,12 @@ public class ShopManager : MonoBehaviour
 
     void BuyItem(InventoryItemData item)
     {
-        if (playerInventory.CurrentGold >= item.GoldValue)
+        if (playerInventory.CurrentMoney >= item.MoneyValue)
         {
             // Zkusíme pøidat do inventáøe (používáme tvoji metodu AddToInventory)
             if (playerInventory.AddToInventory(item, 1))
             {
-                playerInventory.SpendGold(item.GoldValue);
+                playerInventory.SpendMoney(item.MoneyValue);
                 UpdateGoldUI();
                 Debug.Log($"Koupil jsi {item.DisplayName}");
             }
@@ -103,6 +103,6 @@ public class ShopManager : MonoBehaviour
 
     void UpdateGoldUI()
     {
-        if (goldText != null) goldText.text = "Zlato: " + playerInventory.CurrentGold;
+        if (MoneyText != null) MoneyText.text = "Zlato: " + playerInventory.CurrentMoney;
     }
 }

@@ -19,7 +19,7 @@ public class InventoryItemData : ScriptableObject
     public string Description;
     public Sprite Icon;
     public int MaxStackSize = 1;
-    public int GoldValue;
+    public int MoneyValue;
     public GameObject ItemPrefab;
 
     public ItemType itemType;

@@ -5,6 +5,9 @@ public class WeaponHandler : MonoBehaviour
     public Transform weaponHolder;
     public LayerMask enemyLayer;
 
+    [Header("UI Crosshair")]
+    public GameObject crosshairUI; // SEM PØETÁHNEŠ TEN OBRÁZEK Z CANVASU
+
     private InventoryItemData currentWeapon;
     private GameObject currentWeaponObj;
     private float lastAttackTime;
@@ -21,7 +24,9 @@ public class WeaponHandler : MonoBehaviour
 
     void Start()
     {
-        // Pojistka, pokud zapomeneš pøiøadit weaponHolder v inspektoru
+        // Pro jistotu na zaèátku crosshair schováme
+        if (crosshairUI != null) crosshairUI.SetActive(false);
+
         if (weaponHolder == null)
         {
             Debug.LogError("CHYBA: WeaponHandler nemá pøiøazený Weapon Holder!");
@@ -37,32 +42,30 @@ public class WeaponHandler : MonoBehaviour
 
     public void EquipWeapon(InventoryItemData newWeapon)
     {
-        // Pokud už tuhle zbraò máme, nic nedìláme (prevence restartu animací atd.)
         if (currentWeapon == newWeapon) return;
 
-        // Nejdøív zahodíme starou zbraò
-        UnequipWeapon();
+        UnequipWeapon(); // Tím se crosshair vypne...
 
         if (newWeapon.itemType != ItemType.Weapon)
             return;
 
         currentWeapon = newWeapon;
 
+        // ... a tady ho ZAPNEME, protože máme zbraò
+        if (crosshairUI != null) crosshairUI.SetActive(true);
+
         if (newWeapon.WeaponInHandPrefab != null)
         {
-            // Instanciace zbranì do ruky
             currentWeaponObj = Instantiate(newWeapon.WeaponInHandPrefab, weaponHolder);
             currentWeaponObj.transform.localPosition = Vector3.zero;
             currentWeaponObj.transform.localRotation = Quaternion.identity;
 
-            // --- OPRAVA KOLIZÍ ---
-            // Najdeme všechny collidery na zbrani a vypneme je, aby neodstrkovaly hráèe
+            // Vypnutí kolizí zbranì
             Collider[] colliders = currentWeaponObj.GetComponentsInChildren<Collider>();
             foreach (var col in colliders)
             {
                 col.enabled = false;
             }
-            // Pokud má zbraò Rigidbody, musíme ho nastavit na Kinematic, aby nepadala
             Rigidbody rb = currentWeaponObj.GetComponent<Rigidbody>();
             if (rb != null) rb.isKinematic = true;
         }
@@ -70,6 +73,9 @@ public class WeaponHandler : MonoBehaviour
 
     public void UnequipWeapon()
     {
+        // Tady ho VYPNEME, když zbraò dáváme pryè
+        if (crosshairUI != null) crosshairUI.SetActive(false);
+
         if (currentWeaponObj != null)
         {
             Destroy(currentWeaponObj);
@@ -82,7 +88,6 @@ public class WeaponHandler : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        // Støelba
         if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + currentWeapon.attackCooldown)
         {
             Attack();
@@ -103,7 +108,6 @@ public class WeaponHandler : MonoBehaviour
             if (weaponSwingSound != null) weaponAudioSource.PlayOneShot(weaponSwingSound);
         }
 
-        // Raycast pro hitscan (okamžitý zásah)
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, currentWeapon.weaponRange, enemyLayer))
         {
             if (hit.collider.TryGetComponent(out EnemyHealth enemy))
@@ -117,24 +121,48 @@ public class WeaponHandler : MonoBehaviour
     {
         if (bulletPrefab != null && firePoint != null)
         {
-            // Upraven smìr støelby pøesnì podle kamery
-            Vector3 shootDirection = Camera.main.transform.forward;
+            // 1. ZJISTÍME CÍL A VZDÁLENOST
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+            Vector3 targetPoint;
+            float distanceToTarget; // Tuhle promìnnou pošleme kulce
 
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
+            // Pokud nìco trefíme (nepøítele, zeï)
+            if (Physics.Raycast(ray, out hit, currentWeapon.weaponRange))
+            {
+                targetPoint = hit.point;
+                // Vzdálenost od hlavnì k bodu zásahu
+                distanceToTarget = Vector3.Distance(firePoint.position, hit.point);
+            }
+            else
+            {
+                // Pokud míøíme do vzduchu, poletí to na maximální dostøel
+                targetPoint = ray.GetPoint(currentWeapon.weaponRange);
+                distanceToTarget = currentWeapon.weaponRange;
+            }
+
+            // 2. VÝPOÈET SMÌRU
+            Vector3 directionToTarget = (targetPoint - firePoint.position).normalized;
+
+            // 3. INSTANCIACE
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(directionToTarget));
 
             BulletMover mover = bullet.AddComponent<BulletMover>();
-            mover.direction = shootDirection;
+            mover.direction = directionToTarget;
             mover.speed = bulletSpeed;
             mover.enemyLayer = enemyLayer;
 
-            // Ignorovat kolize støely s hráèem (pro jistotu)
+            // --- TADY TO PØEDÁVÁME ---
+            mover.maxDistance = distanceToTarget;
+            // -------------------------
+
+            // Ignorace kolizí s hráèem
             Collider bulletCol = bullet.GetComponent<Collider>();
-            // Zkusíme najít collider hráèe (pøedpokládáme CharacterController nebo CapsuleCollider na rodièi WeaponHandleru)
-            Collider playerCol = GetComponentInParent<Collider>(); // Nebo CharacterController
+            CharacterController playerController = GetComponentInParent<CharacterController>();
+            if (bulletCol != null && playerController != null)
+                Physics.IgnoreCollision(bulletCol, playerController);
 
-            if (bulletCol != null && playerCol != null)
-                Physics.IgnoreCollision(bulletCol, playerCol);
-
+            // Pojistka (kdyby náhodou letìla déle než 5s)
             Destroy(bullet, 5f);
         }
     }
