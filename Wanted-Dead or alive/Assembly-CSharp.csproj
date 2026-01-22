@@ -90,11 +90,13 @@
     <Compile Include="Assets\SceneManagment\SceneSwitch.cs" />
     <Compile Include="Assets\Movement\TrainDoor.cs" />
     <Compile Include="Assets\PlayerHealth\PlayerNeeds.cs" />
+    <Compile Include="Assets\Quest\WantedContract.cs" />
     <Compile Include="Assets\InventoryScripts\Interactor.cs" />
     <Compile Include="Assets\PlayerHealth\PlayerUI.cs" />
     <Compile Include="Assets\TransformSaveLoadSystem\TransformSaveData.cs" />
     <Compile Include="Assets\SaveLoad\SaveLoad.cs" />
     <Compile Include="Assets\SaveLoad\UniqueID.cs" />
+    <Compile Include="Assets\Map\MapManager.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventorySystem.cs" />
     <Compile Include="Assets\Minimap\Minimap.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\InventoryDisplay.cs" />
@@ -127,7 +129,7 @@
     <Compile Include="Assets\Combat\EnemyHealth.cs" />
     <Compile Include="Assets\Combat\EnemySpawner.cs" />
     <Compile Include="Assets\Movement\HorseMovement.cs" />
-    <Compile Include="Assets\Quest\WantedContract.cs" />
+    <Compile Include="Assets\InteractionPromptUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CrystalShader.shader" />

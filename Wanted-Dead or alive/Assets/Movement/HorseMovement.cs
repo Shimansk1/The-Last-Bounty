@@ -22,34 +22,39 @@ public class HorseMovement : MonoBehaviour
 
     void Update()
     {
-        // Pokud na koni nikdo nesedí, nehýbe se
-        if (!isMounted) return;
-
-        // Gravitace a Ground Check
+        // 1. GRAVITACE A GROUND CHECK (Musí bìžet VŽDYCKY, i když na koni nikdo nesedí)
         IsGrounded = Physics.CheckSphere(GroundCheck.position, GroundDistance, GroundMask);
         if (IsGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        // Vstupy (W/S pro pohyb, A/D pro otáèení)
-        float z = Input.GetAxis("Vertical"); // Dopøedu/Dozadu
-        float x = Input.GetAxis("Horizontal"); // Otáèení
+        Vector3 move = Vector3.zero;
 
-        // 1. Otáèení konì (rotace podle osy Y)
-        transform.Rotate(0, x * RotateSpeed * Time.deltaTime, 0);
-
-        // 2. Pohyb dopøedu (kùò chodí hlavnì dopøedu, ne do boku)
-        Vector3 move = transform.forward * z;
-        controller.Move(move * Speed * Time.deltaTime);
-
-        // Skok
-        if (Input.GetButtonDown("Jump") && IsGrounded)
+        // 2. OVLÁDÁNÍ (Bìží JEN když sedíme)
+        if (isMounted)
         {
-            velocity.y = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+            // Vstupy (W/S pro pohyb, A/D pro otáèení)
+            float z = Input.GetAxis("Vertical");
+            float x = Input.GetAxis("Horizontal");
+
+            // Otáèení konì
+            transform.Rotate(0, x * RotateSpeed * Time.deltaTime, 0);
+
+            // Výpoèet pohybu dopøedu
+            move = transform.forward * z;
+
+            // Skok
+            if (Input.GetButtonDown("Jump") && IsGrounded)
+            {
+                velocity.y = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+            }
         }
 
-        // Aplikace gravitace
+        // 3. APLIKACE POHYBU A GRAVITACE
+        // Pokud nesedíme, 'move' je nula, takže kùò nejde dopøedu, ale gravitace stále funguje
+        controller.Move(move * Speed * Time.deltaTime);
+
         velocity.y += Gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
