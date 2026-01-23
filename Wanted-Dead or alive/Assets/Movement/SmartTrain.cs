@@ -12,12 +12,8 @@ public class SmartTrain : MonoBehaviour
 
     [Header("Logika")]
     public bool isStopped = false;
-
-    // NOVÉ: Tady bude uložený bod, kam se má vystupovat.
-    // Vagóny si to odsud pøeètou.
     public Transform currentExitPoint;
 
-    // Interní
     private Transform[] waypoints;
     private int currentPointIndex;
     public List<Vector3> breadcrumbs = new List<Vector3>();
@@ -37,7 +33,6 @@ public class SmartTrain : MonoBehaviour
 
     void Update()
     {
-        // Nahrávání historie
         if (breadcrumbs.Count == 0 || Vector3.Distance(transform.position, breadcrumbs[breadcrumbs.Count - 1]) > 0.1f)
         {
             breadcrumbs.Add(transform.position);
@@ -46,7 +41,6 @@ public class SmartTrain : MonoBehaviour
 
         if (isStopped || waypoints.Length == 0) return;
 
-        // Jízda
         Transform targetPoint = waypoints[currentPointIndex];
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
 
@@ -81,17 +75,10 @@ public class SmartTrain : MonoBehaviour
     IEnumerator StopAtStation(StationPoint station)
     {
         isStopped = true;
-
-        // NOVÉ: Øekneme všem, kde je výstup
         currentExitPoint = station.exitPoint;
-
-        Debug.Log("Zastávka: " + station.stationName);
 
         yield return new WaitForSeconds(station.waitTime);
 
-        Debug.Log("Odjezd...");
-
-        // NOVÉ: Smažeme výstup, protože už jedeme
         currentExitPoint = null;
         isStopped = false;
 

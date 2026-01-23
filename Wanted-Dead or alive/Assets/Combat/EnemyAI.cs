@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     public float detectionRadius = 50f;
     public float attackRadius = 2.5f;
-    public float exitAttackBuffer = 1.0f; // o kolik metrů musí hráč odskočit, aby AI přestala útočit
+    public float exitAttackBuffer = 1.0f;
     public float moveSpeed = 4.5f;
 
     public int attackDamage = 10;
@@ -28,14 +28,13 @@ public class EnemyAI : MonoBehaviour
         if (agent != null)
         {
             agent.speed = moveSpeed;
-            // nech agent dojit dostatecne blizko (menší než attackRadius)
             agent.stoppingDistance = Mathf.Max(0.1f, attackRadius * 0.6f);
             agent.updateRotation = true;
             agent.updatePosition = true;
         }
 
         if (animator != null)
-            animator.applyRootMotion = false; // root motion může kazit navmesh chování
+            animator.applyRootMotion = false;
     }
 
     private void Update()
@@ -44,10 +43,6 @@ public class EnemyAI : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
-        // Debug: uvidíš stav a vzdálenost
-        //Debug.Log($"[ENEMY] {name} State={state} Dist={distance:F2} attackR={attackRadius} stopDist={agent.stoppingDistance:F2}");
-
-        // Stavové přechody (hysteréze: buffer při opuštění útoku)
         switch (state)
         {
             case State.Idle:
@@ -56,7 +51,6 @@ public class EnemyAI : MonoBehaviour
                 break;
 
             case State.Chasing:
-                // když hráč dojde do attack rady -> přepni na attack
                 if (distance <= attackRadius)
                 {
                     EnterAttacking();
@@ -67,7 +61,6 @@ public class EnemyAI : MonoBehaviour
                 }
                 else
                 {
-                    // aktualizuj cíl při chase
                     agent.isStopped = false;
                     agent.SetDestination(player.position);
                     animator?.SetBool("IsRunning", true);
@@ -76,14 +69,12 @@ public class EnemyAI : MonoBehaviour
                 break;
 
             case State.Attacking:
-                // pokud hráč zdrhne dál než attackRadius + buffer -> přepni zpátky do chase
                 if (distance > attackRadius + exitAttackBuffer)
                 {
                     EnterChasing();
                 }
                 else
                 {
-                    // zůstaň v attack stavu: otoč se k hráči a útoč dle cooldownu
                     FacePlayer();
                     agent.isStopped = true;
                     animator?.SetBool("IsRunning", false);
@@ -101,7 +92,6 @@ public class EnemyAI : MonoBehaviour
         agent.isStopped = true;
         animator?.SetBool("IsRunning", false);
         animator?.SetBool("IsFighting", false);
-        Debug.Log($"[ENEMY] {name} -> Idle");
     }
 
     private void EnterChasing()
@@ -111,7 +101,6 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position);
         animator?.SetBool("IsRunning", true);
         animator?.SetBool("IsFighting", false);
-        Debug.Log($"[ENEMY] {name} -> Chasing");
     }
 
     private void EnterAttacking()
@@ -121,7 +110,6 @@ public class EnemyAI : MonoBehaviour
         agent.ResetPath();
         animator?.SetBool("IsRunning", false);
         animator?.SetBool("IsFighting", true);
-        Debug.Log($"[ENEMY] {name} -> Attacking");
     }
 
     private void FacePlayer()
@@ -137,22 +125,14 @@ public class EnemyAI : MonoBehaviour
 
     void TryAttack()
     {
-        // debug na začátek
-        Debug.Log($"[ENEMY] {name} TryAttack() lastDiff={(Time.time - lastAttackTime):F2} cooldown={attackCooldown}");
-
         if (Time.time - lastAttackTime < attackCooldown) return;
 
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        if (playerHealth == null)
-        {
-            Debug.LogError("[ENEMY] PlayerHealth not found on player!");
-            return;
-        }
+        if (playerHealth == null) return;
 
         if (!playerHealth.isDead)
         {
             playerHealth.TakeDamage(attackDamage);
-            Debug.Log($"[ENEMY] {name} DEALT {attackDamage} dmg to player. PlayerHP={playerHealth.currentHealth}");
             lastAttackTime = Time.time;
         }
     }

@@ -3,8 +3,13 @@ using UnityEngine.UI;
 
 public class ReputationUI : MonoBehaviour
 {
+    [Header("Nastavení")]
+    public CityName cityToDisplay; 
+
+    [Header("UI Elementy")]
     [SerializeField] private Image reputationBar;
     [SerializeField] private Text reputationText;
+
     private ReputationManager reputationManager;
 
     void Start()
@@ -20,8 +25,14 @@ public class ReputationUI : MonoBehaviour
 
     void UpdateUI()
     {
-        float reputation = reputationManager.GetReputation();
-        reputationBar.fillAmount = reputation / 100f;
-        reputationText.text = $"Reputation: {reputation:F0}%";
+        if (reputationManager == null) return;
+
+        float reputation = reputationManager.GetReputation(cityToDisplay);
+
+        if (reputationBar != null)
+            reputationBar.fillAmount = reputation / 100f;
+
+        if (reputationText != null)
+            reputationText.text = $"{cityToDisplay}: {reputation:F0}%";
     }
 }

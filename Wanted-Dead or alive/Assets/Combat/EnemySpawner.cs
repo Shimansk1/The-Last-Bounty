@@ -7,10 +7,10 @@ public class EnemySpawner : MonoBehaviour
     public Transform player;
 
     [Header("Spawn Settings")]
-    public GameObject enemyPrefab;         // základní prefab bandity
-    public Transform[] spawnPoints;        // místa, kde se mohou spawnout
-    public float spawnInterval = 20f;      // jak èasto se spawnou (v sekundách)
-    public int maxEnemies = 10;            // limit na poèet nepøátel ve scénì
+    public GameObject enemyPrefab;
+    public Transform[] spawnPoints;
+    public float spawnInterval = 20f;
+    public int maxEnemies = 10;
 
     private float timer;
     private List<GameObject> spawnedEnemies = new();
@@ -25,7 +25,6 @@ public class EnemySpawner : MonoBehaviour
             timer = 0f;
         }
 
-        // èistí seznam od mrtvých/enemákù co zmizeli
         spawnedEnemies.RemoveAll(e => e == null);
     }
 
@@ -36,18 +35,14 @@ public class EnemySpawner : MonoBehaviour
 
         Transform point = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        // ne spawnuj hned vedle hráèe
         if (Vector3.Distance(player.position, point.position) < 15f)
             return;
 
         GameObject enemy = Instantiate(enemyPrefab, point.position, Quaternion.identity);
         spawnedEnemies.Add(enemy);
 
-        // Pøedání reference na hráèe AIèku
         EnemyAI ai = enemy.GetComponent<EnemyAI>();
         if (ai != null)
             ai.player = player;
-
-        Debug.Log($"Spawned enemy at {point.position}");
     }
 }

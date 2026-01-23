@@ -50,7 +50,6 @@ public class PlayerInventoryHolder : InventoryHolder
         }
     }
 
-
     public bool AddToInventory(InventoryItemData data, int amount)
     {
         if (primaryInventorySystem.AddToInventory(data, amount))
@@ -61,7 +60,7 @@ public class PlayerInventoryHolder : InventoryHolder
     }
 
     [Header("Ekonomika")]
-    [SerializeField] private int currentMoney = 500; // Startovní peníze
+    [SerializeField] private int currentMoney = 500;
     public int CurrentMoney => currentMoney;
 
     public bool SpendMoney(int amount)
@@ -69,8 +68,6 @@ public class PlayerInventoryHolder : InventoryHolder
         if (currentMoney >= amount)
         {
             currentMoney -= amount;
-            Debug.Log($"Utraceno {amount} zlata. Zùstatek: {currentMoney}");
-            // Tady bys mohl zavolat event pro aktualizaci UI penìz
             return true;
         }
         return false;

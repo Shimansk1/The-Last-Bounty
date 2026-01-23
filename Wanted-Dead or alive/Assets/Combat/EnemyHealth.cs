@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+
+    public Slider healthSlider;
 
     [Header("Loot nastavení")]
     public GameObject[] lootItems;
@@ -13,11 +16,23 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
+        }
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+
+        if (healthSlider != null)
+        {
+            healthSlider.value = currentHealth;
+        }
+
         if (currentHealth <= 0)
         {
             Die();
@@ -26,6 +41,18 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        // --- NOVÉ: KONTROLA BOUNTY ---
+        // Zjistíme, jestli jsem byl cílem kontraktu
+        BountyTarget bountyInfo = GetComponent<BountyTarget>();
+        if (bountyInfo != null && bountyInfo.myContract != null)
+        {
+            // Pokud ano, nahlásíme smrt Trackeru
+            if (WantedQuestTracker.Instance != null)
+            {
+                WantedQuestTracker.Instance.NotifyEnemyDeath(bountyInfo.myContract);
+            }
+        }
+        // -----------------------------
 
         DropLoot();
 

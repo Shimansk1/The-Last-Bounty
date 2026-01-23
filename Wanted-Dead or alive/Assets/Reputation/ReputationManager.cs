@@ -1,10 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ReputationManager : MonoBehaviour
 {
     public static ReputationManager Instance { get; private set; }
 
-    private float mainCityReputation = 0f;
+    private Dictionary<CityName, float> cityReputations = new Dictionary<CityName, float>();
 
     void Awake()
     {
@@ -12,6 +13,7 @@ public class ReputationManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeReputations();
         }
         else
         {
@@ -19,13 +21,28 @@ public class ReputationManager : MonoBehaviour
         }
     }
 
-    public void AddReputation(float amount)
+    void InitializeReputations()
     {
-        mainCityReputation = Mathf.Clamp(mainCityReputation + amount, 0f, 100f);
+        foreach (CityName city in System.Enum.GetValues(typeof(CityName)))
+        {
+            cityReputations[city] = 0f;
+        }
     }
 
-    public float GetReputation()
+    public void AddReputation(CityName city, float amount)
     {
-        return mainCityReputation;
+        if (cityReputations.ContainsKey(city))
+        {
+            cityReputations[city] = Mathf.Clamp(cityReputations[city] + amount, 0f, 100f);
+        }
+    }
+
+    public float GetReputation(CityName city)
+    {
+        if (cityReputations.ContainsKey(city))
+        {
+            return cityReputations[city];
+        }
+        return 0f;
     }
 }
