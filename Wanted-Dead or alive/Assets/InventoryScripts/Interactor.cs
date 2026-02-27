@@ -10,21 +10,18 @@ public class Interactor : MonoBehaviour
     public float InteractionPointRadius = 1f;
 
     [Header("UI Reference")]
-    public InteractionPromptUI promptUI; // Sem pøetáhneš ten nový UI skript
+    public InteractionPromptUI promptUI; 
 
     public bool IsInteracting { get; private set; }
     [SerializeField] private MouseLook mouseLook;
 
-    // Pomocná promìnná pro nalezený interactable
     private IInteractable currentInteractable;
 
     private void Update()
     {
-        // 1. NEUSTÁLÉ HLEDÁNÍ (Každý frame)
-        // Najdeme všechny collidery v okolí
+
         var colliders = Physics.OverlapSphere(InteractionPoint.position, InteractionPointRadius, InteractionLayer);
         
-        // Najdeme ten NEJBLIŽŠÍ (aby se UI nepralo, když je víc vìcí u sebe)
         IInteractable closestInteractable = null;
         float closestDistance = float.MaxValue;
 
@@ -42,13 +39,11 @@ public class Interactor : MonoBehaviour
             }
         }
 
-        // 2. AKTUALIZACE UI (Zobrazit nebo Schovat)
         if (closestInteractable != null)
         {
             currentInteractable = closestInteractable;
             
-            // Zobrazíme prompt. Musíme získat Transform objektu.
-            // Protože IInteractable je interface, musíme to pøetypovat na Component nebo MonoBehaviour
+
             var interactableObject = closestInteractable as MonoBehaviour; 
             if (interactableObject != null && promptUI != null)
             {
@@ -61,7 +56,6 @@ public class Interactor : MonoBehaviour
             if (promptUI != null) promptUI.Hide();
         }
 
-        // 3. VSTUP (INPUT) - Samotná interakce
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (currentInteractable != null)
@@ -77,7 +71,6 @@ public class Interactor : MonoBehaviour
             }
         }
 
-        // Zavírání interakce
         if (Keyboard.current.escapeKey.wasPressedThisFrame && IsInteracting)
         {
             EndInteraction();
@@ -93,7 +86,6 @@ public class Interactor : MonoBehaviour
         if (tutorial != null)
             tutorial.MarkStepComplete("openChest");
             
-        // Když interagujeme, možná chceme prompt schovat?
         if (promptUI != null) promptUI.Hide();
     }
 

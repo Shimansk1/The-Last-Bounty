@@ -70,6 +70,7 @@
     <Compile Include="Assets\Other\BuildRequirement.cs" />
     <Compile Include="Assets\Other\SettingsMenu.cs" />
     <Compile Include="Assets\Movement\PlayerMovementScript.cs" />
+    <Compile Include="Assets\Quest\BountySpawner.cs" />
     <Compile Include="Assets\Other\CraftingRecipe.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\ChestInventory.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventoryHolder.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\SaveLoad\SaveData.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\MouseItemData.cs" />
     <Compile Include="Assets\Quest\WantedQuestTracker.cs" />
+    <Compile Include="Assets\Quest\BountyTarget.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventorySlot.cs" />
     <Compile Include="Assets\Movement\HorseInteraction.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\InventorySlot_UI.cs" />
@@ -109,9 +111,11 @@
     <Compile Include="Assets\DialogSystem\NPCController.cs" />
     <Compile Include="Assets\TransformSaveLoadSystem\SaveGameManageris.cs" />
     <Compile Include="Assets\Other\CoroutineRunner.cs" />
+    <Compile Include="Assets\Reputation\CityName.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\InventoryItemData.cs" />
     <Compile Include="Assets\Combat\EnemyLootDropper.cs" />
     <Compile Include="Assets\ShopManager.cs" />
+    <Compile Include="Assets\Combat\Billboard.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\ItemPickup.cs" />
     <Compile Include="Assets\SaveLoad\SerializableDictionary.cs" />
     <Compile Include="Assets\Combat\WeaponHandler.cs" />
@@ -119,6 +123,7 @@
     <Compile Include="Assets\SceneManagment\ControlsOpener.cs" />
     <Compile Include="Assets\Movement\TrainWagon.cs" />
     <Compile Include="Assets\InventoryScripts\UI_Scripts\StaticInventoryDisplay.cs" />
+    <Compile Include="Assets\InteractionPromptUI.cs" />
     <Compile Include="Assets\SaveLoad\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Combat\EnemyAI.cs" />
     <Compile Include="Assets\Other\CoconutSpawner.cs" />
@@ -129,7 +134,6 @@
     <Compile Include="Assets\Combat\EnemyHealth.cs" />
     <Compile Include="Assets\Combat\EnemySpawner.cs" />
     <Compile Include="Assets\Movement\HorseMovement.cs" />
-    <Compile Include="Assets\InteractionPromptUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CrystalShader.shader" />

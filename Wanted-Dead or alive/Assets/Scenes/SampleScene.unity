@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44612408, g: 0.4958939, b: 0.574528, a: 1}
+  m_IndirectSpecularColor: {r: 0.44612437, g: 0.49589443, b: 0.57452863, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13853,9 +13853,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 709824838}
     m_Modifications:
+    - target: {fileID: 101006, guid: eede53cc5cf80734db132a105d04dd97, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 155998, guid: eede53cc5cf80734db132a105d04dd97, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 169624, guid: eede53cc5cf80734db132a105d04dd97, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Chest_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 169624, guid: eede53cc5cf80734db132a105d04dd97, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 488904, guid: eede53cc5cf80734db132a105d04dd97, type: 3}
       propertyPath: m_RootOrder
@@ -18108,7 +18120,7 @@ GameObject:
   - component: {fileID: 709824838}
   - component: {fileID: 709824837}
   - component: {fileID: 709824836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18143,7 +18155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6820552ae0dd5e48b93c59df623294b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: 
+  _id: 4cb041e2-6cff-4c6a-a7ee-85a82fb492fc
 --- !u!4 &709824838
 Transform:
   m_ObjectHideFlags: 0
@@ -18152,8 +18164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709824835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -1.442, z: 13}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 1, y: -1, z: 13}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1597132451}
