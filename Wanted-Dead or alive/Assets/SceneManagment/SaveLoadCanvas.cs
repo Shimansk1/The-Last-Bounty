@@ -65,7 +65,7 @@ public class SaveLoadCanvas : MonoBehaviour
     }
     public void MenuChange()
     {
-        SceneManager.LoadScene("Menu Scene");
+        SceneManager.LoadScene("MenuScene");
         Cursor.visible = true;
         mouseLook.canMove = false;
     }
