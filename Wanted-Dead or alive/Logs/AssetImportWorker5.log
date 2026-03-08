@@ -15,7 +15,7 @@ C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-65410
+51286
 Successfully changed project path to: C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
 C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,12 +47,12 @@ C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [28376] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 2760095351 [EditorId] 2760095351 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [32984] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 4019677911 [EditorId] 4019677911 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [28376] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 2760095351 [EditorId] 2760095351 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [32984] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 4019677911 [EditorId] 4019677911 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
-Refreshing native plugins compatible for Editor in 64.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 70.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.32f1 (3b9dae9532f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Resources/UnitySubsystems
@@ -68,37 +68,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011487 seconds.
+Registered in 0.011588 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 63.43 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 63.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.423 seconds
+- Completed reload, in  0.433 seconds
 Domain Reload Profiling:
-	ReloadAssembly (423ms)
-		BeginReloadAssembly (78ms)
+	ReloadAssembly (433ms)
+		BeginReloadAssembly (81ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (270ms)
-			LoadAssemblies (75ms)
+		EndReloadAssembly (275ms)
+			LoadAssemblies (78ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (55ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (14ms)
-			SetupLoadedEditorAssemblies (172ms)
+			SetupLoadedEditorAssemblies (176ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (63ms)
+				RefreshPlugins (64ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadAttributes (78ms)
 				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -106,34 +106,34 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007217 seconds.
+Registered in 0.007443 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.62 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 63.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.830 seconds
+- Completed reload, in  0.833 seconds
 Domain Reload Profiling:
-	ReloadAssembly (831ms)
+	ReloadAssembly (833ms)
 		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (11ms)
-		EndReloadAssembly (660ms)
-			LoadAssemblies (86ms)
+		EndReloadAssembly (663ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (155ms)
+			SetupTypeCache (150ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (395ms)
+			SetupLoadedEditorAssemblies (402ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (63ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (238ms)
+				RefreshPlugins (64ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (243ms)
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
@@ -142,127 +142,13 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4067 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 60 unused Assets / (2.7 MB). Loaded Objects now: 4537.
-Memory consumption went from 182.4 MB to 179.7 MB.
-Total: 2.499800 ms (FindLiveObjects: 0.173800 ms CreateObjectMapping: 0.059800 ms MarkObjects: 1.922900 ms  DeleteObjects: 0.342700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009100 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.920 seconds
-Domain Reload Profiling:
-	ReloadAssembly (921ms)
-		BeginReloadAssembly (158ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (673ms)
-			LoadAssemblies (128ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (176ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (360ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (70ms)
-				ProcessInitializeOnLoadAttributes (250ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (16ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3968 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4540.
-Memory consumption went from 172.3 MB to 169.6 MB.
-Total: 2.648800 ms (FindLiveObjects: 0.201100 ms CreateObjectMapping: 0.096700 ms MarkObjects: 1.891500 ms  DeleteObjects: 0.458700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008165 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.898 seconds
-Domain Reload Profiling:
-	ReloadAssembly (898ms)
-		BeginReloadAssembly (155ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (656ms)
-			LoadAssemblies (127ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (170ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (350ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (238ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (20ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3968 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4543.
-Memory consumption went from 172.3 MB to 169.6 MB.
-Total: 2.977700 ms (FindLiveObjects: 0.192600 ms CreateObjectMapping: 0.066900 ms MarkObjects: 2.353000 ms  DeleteObjects: 0.364600 ms)
+Memory consumption went from 182.3 MB to 179.6 MB.
+Total: 2.387600 ms (FindLiveObjects: 0.139400 ms CreateObjectMapping: 0.065600 ms MarkObjects: 1.841600 ms  DeleteObjects: 0.340500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -279,508 +165,460 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 41387.488937 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_02.mat
-  artifactKey: Guid(357b35a2ad7a31542a963e5838dd315b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 107726.554651 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Sunshade_01.fbx
+  artifactKey: Guid(50da94c4783485a4b9e3b04b6e44e701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_02.mat using Guid(357b35a2ad7a31542a963e5838dd315b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b545742a157da8245f909ca39b31f9b8') in 0.140197 seconds 
-Number of asset objects unloaded after import = 12
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Sunshade_01.fbx using Guid(50da94c4783485a4b9e3b04b6e44e701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf0be3ba3f73fa04936cc1f2a7252c0') in 0.094409 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/PolygonWestern/Models/SM_Bld_Double_DeckCover_01.fbx
+  artifactKey: Guid(f1336e5675b86324b91e84c8307ba2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Models/SM_Bld_Double_DeckCover_01.fbx using Guid(f1336e5675b86324b91e84c8307ba2ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0786ae755ab633f5c597764a95b3bc6e') in 0.008330 seconds 
+Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
   Time since last request: 0.000013 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/cloverMat_01_Normals.tga
-  artifactKey: Guid(0c101edb0f016fb468689c859b09bd09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_Facade_02_Collision.fbx
+  artifactKey: Guid(bee33fec5395f204f9cfa4d2412f7cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/cloverMat_01_Normals.tga using Guid(0c101edb0f016fb468689c859b09bd09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8bdfc3781b281ca2719fd5737aa852d') in 0.035798 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_Facade_02_Collision.fbx using Guid(bee33fec5395f204f9cfa4d2412f7cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81435422f560226a00e30c2125ff36b4') in 0.008235 seconds 
+Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/PolygonPirates/Prefabs/Characters/Character_Pirate_First_Mate_01.prefab
-  artifactKey: Guid(a0285b189c83e4240874d46f667867e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonWestern/Models/SM_Bld_DeckSteps_01.fbx
+  artifactKey: Guid(83ace1a0d0b03c447a935de87da4f87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Characters/Character_Pirate_First_Mate_01.prefab using Guid(a0285b189c83e4240874d46f667867e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f625913415524bd8d6ea7283d5584fb0') in 0.041084 seconds 
-Number of asset objects unloaded after import = 316
+Start importing Assets/PolygonWestern/Models/SM_Bld_DeckSteps_01.fbx using Guid(83ace1a0d0b03c447a935de87da4f87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '325d2a10ed32d4fc37141154cc42cff9') in 0.009583 seconds 
+Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/CreeperMat_01.tga
-  artifactKey: Guid(959836486a862ce46bf27326e214508d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_DeckCover_02_Collision.fbx
+  artifactKey: Guid(382ea8346d684684385d9bb7e73b3c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/CreeperMat_01.tga using Guid(959836486a862ce46bf27326e214508d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebedf79ceb0a570fed347311ceda8cd7') in 0.026295 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_DeckCover_02_Collision.fbx using Guid(382ea8346d684684385d9bb7e73b3c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0535fcc5b456e47fecda5e811f515272') in 0.007254 seconds 
+Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/PolygonPirates/Prefabs/Characters/Character_Gentleman_01.prefab
-  artifactKey: Guid(81a28c375b28168439a9968612b54c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_Deck_03_Collision.fbx
+  artifactKey: Guid(d7ebf7f8938f9214b8968def8c621b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Characters/Character_Gentleman_01.prefab using Guid(81a28c375b28168439a9968612b54c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b354baa618e262e0042be4dc1b3f9bf4') in 0.021665 seconds 
-Number of asset objects unloaded after import = 316
+Start importing Assets/PolygonWestern/Models/Colliders/SM_Bld_Double_Deck_03_Collision.fbx using Guid(d7ebf7f8938f9214b8968def8c621b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf4a2e45cbc6bc88962e78b86e45cb48') in 0.009429 seconds 
+Number of asset objects unloaded after import = 7
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_04.mat
-  artifactKey: Guid(407a744c826aaae4d89960bb583a24b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 39.242875 seconds.
+  path: Assets/Other/imgbin-rum-ball-nimono-liqueur-green-curry-rum-drink-x5zZrzUU9x8T2PsJ7G9S8PCa4_t.jpg
+  artifactKey: Guid(0792a85f9f80bb3488ea6a1520b7b479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_04.mat using Guid(407a744c826aaae4d89960bb583a24b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec500386f25c5bb76683253eab449f0') in 0.022074 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/FX/FX_Textures/Crab_Normals.png
-  artifactKey: Guid(0bbd85cb0a2e3d745b706f6708ad27b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/FX/FX_Textures/Crab_Normals.png using Guid(0bbd85cb0a2e3d745b706f6708ad27b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b8b8eb1282d0b97a27e343b98b14d0') in 0.048362 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/CreeperMat_01_Normals.tga
-  artifactKey: Guid(79996dab23987a14b8fa15554d5b5e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/CreeperMat_01_Normals.tga using Guid(79996dab23987a14b8fa15554d5b5e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f3b22793f1d0282fae04cc88a0d4fbd') in 0.025253 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Creeper_Flat_Mat_01.mat
-  artifactKey: Guid(46b65f596fc17f8418d5bd79f8252b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Creeper_Flat_Mat_01.mat using Guid(46b65f596fc17f8418d5bd79f8252b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eae8f69c61c40f2497e587f7f301ee1') in 0.014330 seconds 
+Start importing Assets/Other/imgbin-rum-ball-nimono-liqueur-green-curry-rum-drink-x5zZrzUU9x8T2PsJ7G9S8PCa4_t.jpg using Guid(0792a85f9f80bb3488ea6a1520b7b479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892a3f9e82e12b3a25c9b0c63902bb03') in 0.048095 seconds 
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_05.mat
-  artifactKey: Guid(d4bd73d7301c98745b88cf3dce0d3f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Front_01.fbx
+  artifactKey: Guid(93beca9b0a370fc42b52de1bf510cffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Bioluminescent/Biolumin_05.mat using Guid(d4bd73d7301c98745b88cf3dce0d3f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49fa26d8fcabe408752adfd3fff3ab44') in 0.023983 seconds 
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Front_01.fbx using Guid(93beca9b0a370fc42b52de1bf510cffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc73e7ac25b560d8de59442bb91d7b5') in 0.009062 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_04.prefab
+  artifactKey: Guid(1b2e9a3fb39ad2541ae12a6e37365d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_04.prefab using Guid(1b2e9a3fb39ad2541ae12a6e37365d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad80a278d841aa3235930fab0136668b') in 0.014467 seconds 
 Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_06.fbx
+  artifactKey: Guid(fcf508237712e024b856ded9647528f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df3a96a7b16156ad8ffa254e23a64f71') in 0.023635 seconds 
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_06.fbx using Guid(fcf508237712e024b856ded9647528f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ae6fbde899c8132c513dd759146ad8') in 0.007629 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_01.prefab
+  artifactKey: Guid(ac06b8204a31fce4483b81a2b93a1aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_01.prefab using Guid(ac06b8204a31fce4483b81a2b93a1aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc43ae6899ebea826b5743ce41c55568') in 0.008280 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Hall_Room_04_Convex.asset
+  artifactKey: Guid(1a0e1b1f7fca2e648964e7327cc8cdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Hall_Room_04_Convex.asset using Guid(1a0e1b1f7fca2e648964e7327cc8cdc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e35e7adf5b954da5365d2f77548cdc5f') in 0.007423 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_07.fbx
+  artifactKey: Guid(d092fa87a240dee4f87191185e02e007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_07.fbx using Guid(d092fa87a240dee4f87191185e02e007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa16bd529fb80b319562a67081e6c3dc') in 0.007558 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_02.fbx
+  artifactKey: Guid(d0df7c6f997f2c44c8471d313145b61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_02.fbx using Guid(d0df7c6f997f2c44c8471d313145b61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02ef2b1063c18f5ebbc91c539f998e1') in 0.008328 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_03.prefab
+  artifactKey: Guid(8071bc80fa7bc5f41a93a3e3b53d1914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Room_03.prefab using Guid(8071bc80fa7bc5f41a93a3e3b53d1914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d03e1155d6dbb709586beedf0ab072') in 0.008280 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Occulsion/Leaf_Banana_01_Occlusion.png
+  artifactKey: Guid(3877c8ab4bbfa73479ee00b9f140a45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Occulsion/Leaf_Banana_01_Occlusion.png using Guid(3877c8ab4bbfa73479ee00b9f140a45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0554c8d4f3a163584434d771f9c29e75') in 0.020707 seconds 
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Combat/Enemy.prefab
-  artifactKey: Guid(a6edb84da4e7cd54aa0ac2c24d8baec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Roof_Square_01.prefab
+  artifactKey: Guid(9f9e04b362343df49bf493726e4974e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/Combat/Enemy.prefab using Guid(a6edb84da4e7cd54aa0ac2c24d8baec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e67fe591b142797545517c4e0944c17') in 0.030315 seconds 
-Number of asset objects unloaded after import = 300
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Roof_Square_01.prefab using Guid(9f9e04b362343df49bf493726e4974e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efeec43e2816467f4f54bff2e51fbd5') in 0.009122 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_02.fbx
+  artifactKey: Guid(5b2c7d30960f23648a98ac8d89637b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Room_02.fbx using Guid(5b2c7d30960f23648a98ac8d89637b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feb54af664dacb16a640a7996bac83ff') in 0.008290 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Balcony_01.prefab
+  artifactKey: Guid(8ab359974e5a5e34da4da3c9734e1e51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Balcony_01.prefab using Guid(8ab359974e5a5e34da4da3c9734e1e51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea8a5a3b793923a126cf388b21fade64') in 0.008225 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_04.fbx
+  artifactKey: Guid(204577c1e3e854b4b9835a5387b3afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_04.fbx using Guid(204577c1e3e854b4b9835a5387b3afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1467d385a17b0ac3efbffa79b06ad2e4') in 0.007448 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Balcony_03_Convex.asset
+  artifactKey: Guid(d9f5fecf44676d14aa2042941e8808ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Balcony_03_Convex.asset using Guid(d9f5fecf44676d14aa2042941e8808ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed9a631e440a9c265d444577c7e65464') in 0.005669 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Roof_03_Convex.asset
+  artifactKey: Guid(a2c1e8c69fc284c42b797d402323804d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Roof_03_Convex.asset using Guid(a2c1e8c69fc284c42b797d402323804d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e0274f370a9513b36f5da7e68d9524') in 0.006483 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/Leaf_Banana_01_Normals.png
+  artifactKey: Guid(2a7a5b250de7d3c46b49074f8de32857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Normals/Leaf_Banana_01_Normals.png using Guid(2a7a5b250de7d3c46b49074f8de32857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e946aeb67030943107626ea0b96bf3e') in 0.025544 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Room_04_Convex.asset
+  artifactKey: Guid(89d6c91fabc33524a9c3f99673c8410b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Room_04_Convex.asset using Guid(89d6c91fabc33524a9c3f99673c8410b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc4f086d5f14d39b87466b2a2dcc9d35') in 0.006690 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/Palm_Bark_01.png
+  artifactKey: Guid(e95713565815fd04cac167370969c884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/Palm_Bark_01.png using Guid(e95713565815fd04cac167370969c884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda5206ec08342fda79a042c2aa1e183') in 0.019935 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Balcony_Corner_01.fbx
+  artifactKey: Guid(898d7e65cf0317245bf40d5218799cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Balcony_Corner_01.fbx using Guid(898d7e65cf0317245bf40d5218799cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '069a032aa5d08a7addda590a23fa06af') in 0.007076 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Front_01.prefab
+  artifactKey: Guid(e69a1b47940791a4d88bccd841fed794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Hall_Front_01.prefab using Guid(e69a1b47940791a4d88bccd841fed794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdf57c19665f932e484c92fe33717403') in 0.008251 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_03.fbx
+  artifactKey: Guid(9b50f4188ca0d8b44b0adf5a014d9600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Cuba_Hall_Room_03.fbx using Guid(9b50f4188ca0d8b44b0adf5a014d9600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09ab2af3c4e7a93b1404498963db4183') in 0.008032 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Room_04.prefab
+  artifactKey: Guid(7063364aec190ca4daa2df5b8933d371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Cuba_Room_04.prefab using Guid(7063364aec190ca4daa2df5b8933d371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0466fe75cf4352d1fb15f75ab8b22a0') in 0.008656 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/Palm_Bark_02.png
+  artifactKey: Guid(d4d11ec3ccf910748a0f5942b90d07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/Palm_Bark_02.png using Guid(d4d11ec3ccf910748a0f5942b90d07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd463d19e3650a244e0cc17a889135daa') in 0.019002 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.182298 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Fort_Base_01_Convex.asset
+  artifactKey: Guid(95e69bff33c98054ca78013bff685804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Fort_Base_01_Convex.asset using Guid(95e69bff33c98054ca78013bff685804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3afcaf0872fd002e95757c4ba764cea') in 0.006732 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Fort_Base_Circle_01.fbx
+  artifactKey: Guid(ea1d2cb3d1910c64a8b984c8388d18ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Fort_Base_Circle_01.fbx using Guid(ea1d2cb3d1910c64a8b984c8388d18ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '662a5d1c71b935744aa0d363ff3d5518') in 0.007472 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_Stilts_02.prefab
+  artifactKey: Guid(31d4aed1e3fa69f48916a476ab5cebdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_Stilts_02.prefab using Guid(31d4aed1e3fa69f48916a476ab5cebdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79a976fb57ff2cb39e92bb1ad185b874') in 0.009508 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Fort_Base_Circle_03.fbx
+  artifactKey: Guid(de48eeaff920e1248a7e85cde828b25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Fort_Base_Circle_03.fbx using Guid(de48eeaff920e1248a7e85cde828b25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02aebf460652026c9e94d5290ffec72c') in 0.008683 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_01.prefab
+  artifactKey: Guid(1a285c3836520484da8e28d5af0ef06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_01.prefab using Guid(1a285c3836520484da8e28d5af0ef06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6894090f13e6e6e1954304423f4ebce5') in 0.008133 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Shanty_Base_Stilts_01.fbx
+  artifactKey: Guid(9aa4c1a7aca6a1b4396e52438646d3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Shanty_Base_Stilts_01.fbx using Guid(9aa4c1a7aca6a1b4396e52438646d3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce693dc64c8a0bdb276c781f6466f031') in 0.007725 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonWestern/Models/SM_Env_Butte_Base_03.fbx
+  artifactKey: Guid(3be5d13f243f41c4d970a0ecc4a0156e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Models/SM_Env_Butte_Base_03.fbx using Guid(3be5d13f243f41c4d970a0ecc4a0156e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1c6cbd43faf2ac517b5be462ae43920') in 0.009672 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_Stilts_01.prefab
+  artifactKey: Guid(a79ed3af542451f469cb0c1865348829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_Base_Stilts_01.prefab using Guid(a79ed3af542451f469cb0c1865348829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1ef6c4aaa647104a5c44dfa7c210af') in 0.008485 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Models/SM_Env_Butte_Base_01.fbx
+  artifactKey: Guid(2557e0bb927d76745a066db6c577ee0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Models/SM_Env_Butte_Base_01.fbx using Guid(2557e0bb927d76745a066db6c577ee0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329fceef80e0042c277103accd4eb976') in 0.008493 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Fort_Base_03.fbx
+  artifactKey: Guid(54f4581c2a2ccd44290dbad6bd3fc010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Fort_Base_03.fbx using Guid(54f4581c2a2ccd44290dbad6bd3fc010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a560742b0c4dad291b4ff5cec52c32b4') in 0.008097 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/SM_Bld_Shanty_Base_Stilts_02.fbx
+  artifactKey: Guid(bf474b28a5ced6b47bbc5a391eb7fc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/SM_Bld_Shanty_Base_Stilts_02.fbx using Guid(bf474b28a5ced6b47bbc5a391eb7fc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c8e80fecf2249a038ba0f94f5fb568') in 0.007498 seconds 
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_Tree_Base_02_Convex 1.asset
+  artifactKey: Guid(9a0d89b8785de5b449d7043d9d9ed28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_Tree_Base_02_Convex 1.asset using Guid(9a0d89b8785de5b449d7043d9d9ed28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f06482481d82049f75cfdc27cc861ff') in 0.007310 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Base_Stilts_01_Convex.asset
+  artifactKey: Guid(0ccd645142aba774b9809c1f61d0a56d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Base_Stilts_01_Convex.asset using Guid(0ccd645142aba774b9809c1f61d0a56d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f212c7beba8571dad767e90e2cab8931') in 0.006162 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 18.302102 seconds.
+  path: Assets/Other/Bullet.prefab
+  artifactKey: Guid(8ca4d988d2ba93c40ad6a9bbbbd10457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Other/Bullet.prefab using Guid(8ca4d988d2ba93c40ad6a9bbbbd10457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b059db0c10c04506ec8a3a610e4318a') in 0.007387 seconds 
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Creeper_Mat_01.mat
-  artifactKey: Guid(96ad55426c097a34e82de1f68836ee84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/FX/FX_Materials/CrabTest.mat
+  artifactKey: Guid(7dac1e1d77132fc41b84ae89f2aac34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Creeper_Mat_01.mat using Guid(96ad55426c097a34e82de1f68836ee84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a69464ce4cc82ffda1c5373602cce63f') in 0.011902 seconds 
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/FX/FX_Materials/CrabTest.mat using Guid(7dac1e1d77132fc41b84ae89f2aac34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7846667d0540c72cb5e9a899f4516729') in 0.028496 seconds 
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Prefabs/FX/FX_BoatWaterEmitter_01.fbx
-  artifactKey: Guid(cb88c181d8d9657429e7d8669a7f7e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.267582 seconds.
+  path: Assets/PolygonWestern/Models/SM_Bld_Single_Front_02.fbx
+  artifactKey: Guid(30d7ce72ebe404c43be72759b81f411e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/FX/FX_BoatWaterEmitter_01.fbx using Guid(cb88c181d8d9657429e7d8669a7f7e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d64fe7ce39ec6dd7fda9b1d5ffbef42') in 0.019262 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Clover_Flat_Mat_01.mat
-  artifactKey: Guid(72193b7bf405d0b40b192d15ed5e7dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Materials/Plants/Clover_Flat_Mat_01.mat using Guid(72193b7bf405d0b40b192d15ed5e7dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d71f4352ed737563af0fe9a621461a') in 0.012413 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.434714 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmTree_04_Convex 1.asset
-  artifactKey: Guid(d89649e5dbca6904b8f552af16252391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmTree_04_Convex 1.asset using Guid(d89649e5dbca6904b8f552af16252391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2cac3784b3f830e78d46aed30c27e7') in 0.023142 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Sunshade_01_Convex 3.asset
-  artifactKey: Guid(72ce84c28801ecd408f8bc11c5f45838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Sunshade_01_Convex 3.asset using Guid(72ce84c28801ecd408f8bc11c5f45838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5017e5cec6b5809e20d2c6b92222b818') in 0.022731 seconds 
-Number of asset objects unloaded after import = 8
+Start importing Assets/PolygonWestern/Models/SM_Bld_Single_Front_02.fbx using Guid(30d7ce72ebe404c43be72759b81f411e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71453a918d6ad82923b5b226cd83990') in 0.017216 seconds 
+Number of asset objects unloaded after import = 22
 ========================================================================
 Received Import Request.
   Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Convex 6.asset
-  artifactKey: Guid(5db400095bdc0de458cb43a470353f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_01_Convex.asset
+  artifactKey: Guid(65988d04c7430134daff409ea875e0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Convex 6.asset using Guid(5db400095bdc0de458cb43a470353f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b253d5fd5c91d69b002e7598fa9942') in 0.012073 seconds 
-Number of asset objects unloaded after import = 4
+Start importing Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_01_Convex.asset using Guid(65988d04c7430134daff409ea875e0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f6cc9dcb72b0141011b9b30e14c314b') in 0.005952 seconds 
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Veh_Boat_Large_01_Hull_Pirate_Convex 3.asset
-  artifactKey: Guid(33100a607607a924f8984bc76070e306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_01_Convex 1.asset
+  artifactKey: Guid(68d794456c7f0f049ae19e339bb33c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Veh_Boat_Large_01_Hull_Pirate_Convex 3.asset using Guid(33100a607607a924f8984bc76070e306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0378bf75040a2ad3e1563c944ca44a5') in 0.013775 seconds 
-Number of asset objects unloaded after import = 4
+Start importing Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_01_Convex 1.asset using Guid(68d794456c7f0f049ae19e339bb33c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '897320db990588706b508f47c4372635') in 0.006060 seconds 
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shipwreck_03_Convex 1.asset
-  artifactKey: Guid(bc23d2229467d7a48b7c53965d94d89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Prefabs/Environments/SM_Env_PalmBush_03.prefab
+  artifactKey: Guid(475b0e29ccc50924a851f3fc5b3eb659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shipwreck_03_Convex 1.asset using Guid(bc23d2229467d7a48b7c53965d94d89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b649932aba35c407c38e13244773e657') in 0.028529 seconds 
+Start importing Assets/PolygonPirates/Prefabs/Environments/SM_Env_PalmBush_03.prefab using Guid(475b0e29ccc50924a851f3fc5b3eb659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4b0de0aedec46e0fa92c2a743036b6c') in 0.007005 seconds 
 Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Preset_02_Convex 2.asset
-  artifactKey: Guid(1ececc9104f0a774fbe8f0ed4970615b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Palm_03.fbx
+  artifactKey: Guid(9580ccc8e42e7d349bac0c9bcfff74c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Preset_02_Convex 2.asset using Guid(1ececc9104f0a774fbe8f0ed4970615b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9c7e425da208d025c32af9d739645b') in 0.016354 seconds 
-Number of asset objects unloaded after import = 6
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shipwreck_01_Convex 2.asset
-  artifactKey: Guid(98025c30101a58a4983e9360a1d437b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shipwreck_01_Convex 2.asset using Guid(98025c30101a58a4983e9360a1d437b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f13316b2d12843e4762dd818b72d1f0') in 0.028424 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Sunshade_01_Convex 5.asset
-  artifactKey: Guid(7df0aacb4b860074e84aa450d83fdfd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Cuba_Sunshade_01_Convex 5.asset using Guid(7df0aacb4b860074e84aa450d83fdfd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0db4803377f6afd594dbc40b8cece63') in 0.015871 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Stall_Cloth_02_Convex 1.asset
-  artifactKey: Guid(b464ab6432a77e84da46c66657412108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Stall_Cloth_02_Convex 1.asset using Guid(b464ab6432a77e84da46c66657412108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59114cc037277f6113d9682351befb6') in 0.017180 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonWestern/Models/CollisionConvex/SM_Env_TreeDead_02_Convex 1.asset
-  artifactKey: Guid(45b9b8609ff59da46a834686d9663e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonWestern/Models/CollisionConvex/SM_Env_TreeDead_02_Convex 1.asset using Guid(45b9b8609ff59da46a834686d9663e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63dfe1cfd3d2c9c2fc93f6b93b5298be') in 0.014745 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_Tree_Large_01_Convex 3.asset
-  artifactKey: Guid(40b7b1ad971542543b852e670814622f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_Tree_Large_01_Convex 3.asset using Guid(40b7b1ad971542543b852e670814622f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae357f4f54b960ac4885ed55bfa8bfc') in 0.014640 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmTree_04_Convex 2.asset
-  artifactKey: Guid(1c571b59541e6d34a8f10e82525e8714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmTree_04_Convex 2.asset using Guid(1c571b59541e6d34a8f10e82525e8714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ba47617a3ffbe0fe6b91e0294f2406b') in 0.013782 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Upsized_Pirate_Convex 7.asset
-  artifactKey: Guid(9f50602f867096c44930b00cf904168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Upsized_Pirate_Convex 7.asset using Guid(9f50602f867096c44930b00cf904168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55090309201c108c1350093712dc08c3') in 0.013631 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Medium_01_Hull_Pirate_Convex 2.asset
-  artifactKey: Guid(89cd1f768c41d774582ead143be71c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Medium_01_Hull_Pirate_Convex 2.asset using Guid(89cd1f768c41d774582ead143be71c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f99bc6de84c4f9b2c2f4d364e71b52') in 0.011333 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Upsized_Pirate_Convex 5.asset
-  artifactKey: Guid(ff1d11db3d9427a449e89c51060c9a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Veh_Boat_Warship_01_Hull_Upsized_Pirate_Convex 5.asset using Guid(ff1d11db3d9427a449e89c51060c9a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3765d22ec75ed9c5f57fc327022014') in 0.014585 seconds 
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Deck_01_Convex 1.asset
-  artifactKey: Guid(870fd741b165c0740a91c2a34322623d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Deck_01_Convex 1.asset using Guid(870fd741b165c0740a91c2a34322623d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '103d2607c120aaa94864712b233e4b7d') in 0.021394 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Preset_02_Convex 1.asset
-  artifactKey: Guid(c3ce2894b90cc854185e4737df6ac881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_Preset_02_Convex 1.asset using Guid(c3ce2894b90cc854185e4737df6ac881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bfb8b2322ec309e22cbea27d4d2cbf6') in 0.014244 seconds 
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 1.050200 seconds.
-  path: Assets/PolygonPirates/Models/SM_Bld_Shanty_SideAttachment_01.fbx
-  artifactKey: Guid(1ea410b5145b1bf459d212e5bbedceb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Bld_Shanty_SideAttachment_01.fbx using Guid(1ea410b5145b1bf459d212e5bbedceb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4121819d6046c5047ebce1e2c69860e') in 0.009280 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_SideAttachment_04.prefab
-  artifactKey: Guid(7024c6f0d04c2334283b2280b9e01b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_SideAttachment_04.prefab using Guid(7024c6f0d04c2334283b2280b9e01b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b3eda36edbc73047d12f4ab34fa5a3') in 0.009661 seconds 
-Number of asset objects unloaded after import = 24
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/PolygonPirates/Models/SM_Prop_Shanty_BuildingAttachment_01.fbx
-  artifactKey: Guid(18ab5724a84fc81488d26286682ea0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Prop_Shanty_BuildingAttachment_01.fbx using Guid(18ab5724a84fc81488d26286682ea0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240784e03c58a86e5dbaab37bc3b6e4f') in 0.008762 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/PolygonWestern/Models/SM_CharacterAttachement_Pouch_01.fbx
-  artifactKey: Guid(e60c5a6c21fec9340ad26508b4c1bf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonWestern/Models/SM_CharacterAttachement_Pouch_01.fbx using Guid(e60c5a6c21fec9340ad26508b4c1bf32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a200ae086dbace6fb5dce1daf29434a0') in 0.009780 seconds 
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/PolygonWestern/Models/SM_CharacterAttachment_Holster_01.fbx
-  artifactKey: Guid(e283e3165584b214eb48be01c6d0d11e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonWestern/Models/SM_CharacterAttachment_Holster_01.fbx using Guid(e283e3165584b214eb48be01c6d0d11e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45266751f55ef9d51bdf52c2f54c7b3c') in 0.007700 seconds 
-Number of asset objects unloaded after import = 7
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Palm_03.fbx using Guid(9580ccc8e42e7d349bac0c9bcfff74c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c72a49fb9c7f3184a2c8c0a27804a78') in 0.018965 seconds 
+Number of asset objects unloaded after import = 20
 ========================================================================
 Received Import Request.
   Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shanty_BuildingAttachment_01_Convex.asset
-  artifactKey: Guid(b5f99d8aad712d14cbefded042670487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Palm_01.fbx
+  artifactKey: Guid(44c0719e1c662fa4a816b52948559e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shanty_BuildingAttachment_01_Convex.asset using Guid(b5f99d8aad712d14cbefded042670487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b2829a3db0ba72363771e379226edde') in 0.006444 seconds 
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Palm_01.fbx using Guid(44c0719e1c662fa4a816b52948559e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aacabbb89880203d6cf26db52fd9706') in 0.020473 seconds 
+Number of asset objects unloaded after import = 25
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_03_Convex.asset
+  artifactKey: Guid(ffa4e6173b2a73841b88bb50b93c648d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_03_Convex.asset using Guid(ffa4e6173b2a73841b88bb50b93c648d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8783d23cbea2463db996ecba1c49fe19') in 0.006624 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmBush_03_Convex.asset
+  artifactKey: Guid(8f733a7bffb4f0246a654b23e785f0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Env_PalmBush_03_Convex.asset using Guid(8f733a7bffb4f0246a654b23e785f0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7d679ae9383160dbba6470a3e31a600') in 0.005467 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000006 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Tropical_01.fbx
+  artifactKey: Guid(4a342dd35031a22429c49712cb734e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Tropical_01.fbx using Guid(4a342dd35031a22429c49712cb734e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693887f997446b06d225c8ec89f952c8') in 0.012986 seconds 
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Tropical_02.fbx
+  artifactKey: Guid(9032c950b97eb1c479ddeb3d9936e111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_Tropical_02.fbx using Guid(9032c950b97eb1c479ddeb3d9936e111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ab07909599de77e98f62f7e05621f4') in 0.013263 seconds 
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_02_Convex.asset
+  artifactKey: Guid(26eb7dd547516af49849876687508f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Models/CollisionConvex/SM_Env_Butte_02_Convex.asset using Guid(26eb7dd547516af49849876687508f4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f003ce505e72cc26262b309c56623ea') in 0.005566 seconds 
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
   Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Skull_Attachment_01_Convex.asset
-  artifactKey: Guid(cc7ae3d8b79d48b428fb100da6292d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_01.fbx
+  artifactKey: Guid(092735527e5e96c40aaf623925d4e234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Skull_Attachment_01_Convex.asset using Guid(cc7ae3d8b79d48b428fb100da6292d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8fbdfa1d5baae3545ad696f207e6b6') in 0.005978 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shanty_BuildingAttachment_02_Convex.asset
-  artifactKey: Guid(8a0eca38f9b3bce4fbb40e2281b0441f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Shanty_BuildingAttachment_02_Convex.asset using Guid(8a0eca38f9b3bce4fbb40e2281b0441f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91abaad5a489f8511dfb10718cc55b42') in 0.007671 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_SideAttachment_02.prefab
-  artifactKey: Guid(55deae894dcf8e340ba7cc54cddf5ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Buildings/SM_Bld_Shanty_SideAttachment_02.prefab using Guid(55deae894dcf8e340ba7cc54cddf5ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec6c276d9bd0afa19c6dff264dfdfce') in 0.008227 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Map_Attachment_01.fbx
-  artifactKey: Guid(24ee07c1e71ee6c42b93072cdafa0b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Map_Attachment_01.fbx using Guid(24ee07c1e71ee6c42b93072cdafa0b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b01f09cfdd784143a2d88138ce7dc699') in 0.010992 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Pouch_Attachment_02.fbx
-  artifactKey: Guid(3a1452905908ffc44a79c41d94584c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Pouch_Attachment_02.fbx using Guid(3a1452905908ffc44a79c41d94584c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c0d4f01342f531aad713a2c7431dc6') in 0.008680 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Lantern_Attachment_01_Convex.asset
-  artifactKey: Guid(83095a4f1d937894dbadf08c9b19234c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Lantern_Attachment_01_Convex.asset using Guid(83095a4f1d937894dbadf08c9b19234c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a2af33790587cb4bdd75a9a3e3964b') in 0.006097 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/SM_Prop_Lantern_Attachment_01.fbx
-  artifactKey: Guid(ad444f89b3b3c1a47846aac9b6ae6b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Prop_Lantern_Attachment_01.fbx using Guid(ad444f89b3b3c1a47846aac9b6ae6b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b63727de98821b4e308b37e7deb625') in 0.008580 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Potion_Attachment_01.fbx
-  artifactKey: Guid(87ba9851222e9ff4fbe7dd25a2a15c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Potion_Attachment_01.fbx using Guid(87ba9851222e9ff4fbe7dd25a2a15c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d3a9be8b8164e019e90785d04e4810') in 0.007786 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/SM_Prop_Shanty_BuildingAttachment_03.fbx
-  artifactKey: Guid(12f8c71686252cc4f8a93a2b7f948625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Prop_Shanty_BuildingAttachment_03.fbx using Guid(12f8c71686252cc4f8a93a2b7f948625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a03d037107ec1d14863d83cd62dd94') in 0.010996 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Prefabs/Items/SM_Item_Bag_Attachment_01.prefab
-  artifactKey: Guid(afc17d1011405d44ea312707f1e84c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Items/SM_Item_Bag_Attachment_01.prefab using Guid(afc17d1011405d44ea312707f1e84c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec55c60e7c88bf0d173f1da8da9946eb') in 0.008588 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Lantern_Attachment_01_Convex 1.asset
-  artifactKey: Guid(398b151023ae916468b7aac1c9ca64f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Prop_Lantern_Attachment_01_Convex 1.asset using Guid(398b151023ae916468b7aac1c9ca64f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb21b48256a207c93b2e618e176c7c57') in 0.008089 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_SideAttachment_01_Convex.asset
-  artifactKey: Guid(2b808884a0134e74880ad39162d810bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_SideAttachment_01_Convex.asset using Guid(2b808884a0134e74880ad39162d810bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c35c2ba779db324177d3d71c93ae119') in 0.006798 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Bag_Attachment_02.fbx
-  artifactKey: Guid(b9bbb70530dba7543977c06368c06a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Bag_Attachment_02.fbx using Guid(b9bbb70530dba7543977c06368c06a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de529cfa472f76a28297f422e19d9a0') in 0.008327 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Bag_Attachment_03.fbx
-  artifactKey: Guid(7d7497718f72d8844a9f1ddbaaba7def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Bag_Attachment_03.fbx using Guid(7d7497718f72d8844a9f1ddbaaba7def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7c8aede60d6fedcfe3e015e6a6a5b03') in 0.012942 seconds 
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonPirates/Prefabs/Props/SM_Prop_Shanty_BuildingAttachment_01.prefab
-  artifactKey: Guid(4feddc6b0e53fdc4186cf18bf2c97608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Props/SM_Prop_Shanty_BuildingAttachment_01.prefab using Guid(4feddc6b0e53fdc4186cf18bf2c97608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '348f3d849431bc6a54ebfbcf1294e917') in 0.009470 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_SideAttachment_02_Convex.asset
-  artifactKey: Guid(1a79e08f76ddbec4cbee5ad1a0abd107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Bld_Shanty_SideAttachment_02_Convex.asset using Guid(1a79e08f76ddbec4cbee5ad1a0abd107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6576171b5c26ec1ac79dab81ad816945') in 0.005766 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Bag_Attachment_02_Convex.asset
-  artifactKey: Guid(e85310a00e6ba9a40b6c928a10ef281d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Bag_Attachment_02_Convex.asset using Guid(e85310a00e6ba9a40b6c928a10ef281d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161e7df04947ad8358b5e8ec43f5390a') in 0.008436 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000009 seconds.
-  path: Assets/PolygonWestern/Models/SM_CharacterAttachments_Pouch_02.fbx
-  artifactKey: Guid(614b6753dd253dd43b7a57218eaf5c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonWestern/Models/SM_CharacterAttachments_Pouch_02.fbx using Guid(614b6753dd253dd43b7a57218eaf5c02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c48bc601dbc516eb7ee46243ba52676') in 0.010239 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Roll_Attachment_01_Convex.asset
-  artifactKey: Guid(677a247b80dc55b40a025a52be118dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Roll_Attachment_01_Convex.asset using Guid(677a247b80dc55b40a025a52be118dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e9e508c12f970feb76fa22d0dfd280') in 0.006383 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/SM_Bld_Shanty_SideAttachment_03.fbx
-  artifactKey: Guid(92bdc2fb0d9ed1c428cfd93797b9f272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Bld_Shanty_SideAttachment_03.fbx using Guid(92bdc2fb0d9ed1c428cfd93797b9f272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b6602f5a769d284f5ce27c3cc5af8a') in 0.010396 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Pouch_Attachment_02_Convex.asset
-  artifactKey: Guid(e49a91f6ab2bc65418a665d4712e78da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Pouch_Attachment_02_Convex.asset using Guid(e49a91f6ab2bc65418a665d4712e78da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e462349df4e2e239c4d96ba84fe169d') in 0.005781 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Skull_Attachment_01.fbx
-  artifactKey: Guid(ebb4ff5ef71bf0345bd352f37503fe20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Skull_Attachment_01.fbx using Guid(ebb4ff5ef71bf0345bd352f37503fe20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1b515e4db53706b22309aba2807921') in 0.007491 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Potion_Attachment_01_Convex.asset
-  artifactKey: Guid(34c8ab03ef2334c4897951a93e952fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/ConvexCollisions/SM_Item_Potion_Attachment_01_Convex.asset using Guid(34c8ab03ef2334c4897951a93e952fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a71e25670011a3b1deed5590b15a36') in 0.006501 seconds 
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000007 seconds.
-  path: Assets/PolygonPirates/Prefabs/Items/SM_Item_Roll_Attachment_01.prefab
-  artifactKey: Guid(4373a57f43eac8e47b0b02decec2e83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Items/SM_Item_Roll_Attachment_01.prefab using Guid(4373a57f43eac8e47b0b02decec2e83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e66a372e87110fe81c3c6fdcdeb855e') in 0.008691 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000008 seconds.
-  path: Assets/PolygonPirates/Models/SM_Item_Pouch_Attachment_01.fbx
-  artifactKey: Guid(26f73519d72771445bd2d656ca177909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Models/SM_Item_Pouch_Attachment_01.fbx using Guid(26f73519d72771445bd2d656ca177909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5444b5cb3e57c54ca15418bd2db60e2e') in 0.010463 seconds 
-Number of asset objects unloaded after import = 7
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Bush_01.fbx using Guid(092735527e5e96c40aaf623925d4e234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c5c9f945c39ed0b9548d86e5f841db') in 0.012912 seconds 
+Number of asset objects unloaded after import = 15
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
