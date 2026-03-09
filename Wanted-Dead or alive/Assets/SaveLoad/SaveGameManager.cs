@@ -72,7 +72,7 @@ public class SaveGameManager : MonoBehaviour
                 playerHealth.playerMovementScript.enabled = false;
 
                 // ? Posuò hráèe o nìco výš, aby nepropadl
-                Player.transform.position = new Vector3(-82.21f, -3.0f, 50.64f);
+                Player.transform.position = new Vector3(0f, 0f, 0f);
 
                 // Až pak znovu aktivuj pohyb
                 Invoke(nameof(EnableMovement), 0.1f);
