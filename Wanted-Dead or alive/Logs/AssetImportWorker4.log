@@ -1,0 +1,734 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.32f1 (3b9dae9532f5) revision 3906990'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit Professional' Language: 'cs' Physical Memory: 31905 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.32f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+52414
+Successfully changed project path to: C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
+C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [14348] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 4244044040 [EditorId] 4244044040 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [14348] Host "[IP] 192.168.0.111 [Port] 0 [Flags] 2 [Guid] 4244044040 [EditorId] 4244044040 [Version] 1048832 [Id] WindowsEditor(7,Simon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 64.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.32f1 (3b9dae9532f5)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/simon/Documents/GitHub/The-Last-Bounty/Wanted-Dead or alive/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:   ATI
+    VRAM:     16200 MB
+    Driver:   32.0.23027.2005
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011706 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 63.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.440 seconds
+Domain Reload Profiling:
+	ReloadAssembly (440ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (282ms)
+			LoadAssemblies (77ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (60ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (14ms)
+			SetupLoadedEditorAssemblies (177ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (63ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (79ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 63.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.843 seconds
+Domain Reload Profiling:
+	ReloadAssembly (843ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (12ms)
+		EndReloadAssembly (671ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (153ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (404ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (64ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (245ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4073 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (2.7 MB). Loaded Objects now: 4538.
+Memory consumption went from 182.6 MB to 179.9 MB.
+Total: 2.353100 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.072000 ms MarkObjects: 1.749800 ms  DeleteObjects: 0.339000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010301 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.019 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1019ms)
+		BeginReloadAssembly (202ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (718ms)
+			LoadAssemblies (172ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (184ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (385ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (260ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4541.
+Memory consumption went from 172.4 MB to 169.7 MB.
+Total: 2.904500 ms (FindLiveObjects: 0.217100 ms CreateObjectMapping: 0.070800 ms MarkObjects: 2.126700 ms  DeleteObjects: 0.489300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009442 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Domain Reload Profiling:
+	ReloadAssembly (928ms)
+		BeginReloadAssembly (161ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (666ms)
+			LoadAssemblies (131ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (170ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (355ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (244ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4544.
+Memory consumption went from 172.4 MB to 169.7 MB.
+Total: 2.403100 ms (FindLiveObjects: 0.183600 ms CreateObjectMapping: 0.058500 ms MarkObjects: 1.824200 ms  DeleteObjects: 0.336400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009668 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.880 seconds
+Domain Reload Profiling:
+	ReloadAssembly (881ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (646ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (173ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (344ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (240ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4547.
+Memory consumption went from 172.4 MB to 169.7 MB.
+Total: 2.470900 ms (FindLiveObjects: 0.201700 ms CreateObjectMapping: 0.071600 ms MarkObjects: 1.820100 ms  DeleteObjects: 0.376700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 286823.775295 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Debris_Texture_01.png
+  artifactKey: Guid(b99eb638ee9100047ac7c66372ea9c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Debris_Texture_01.png using Guid(b99eb638ee9100047ac7c66372ea9c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f095a46ca7b18b6f6aab4c607041d7da') in 0.086851 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010206 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Domain Reload Profiling:
+	ReloadAssembly (895ms)
+		BeginReloadAssembly (156ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (660ms)
+			LoadAssemblies (122ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (170ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (355ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (242ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4553.
+Memory consumption went from 172.5 MB to 169.8 MB.
+Total: 2.437700 ms (FindLiveObjects: 0.194500 ms CreateObjectMapping: 0.084200 ms MarkObjects: 1.808100 ms  DeleteObjects: 0.350300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.881 seconds
+Domain Reload Profiling:
+	ReloadAssembly (882ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (653ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (164ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (348ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (238ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4556.
+Memory consumption went from 172.5 MB to 169.8 MB.
+Total: 2.600100 ms (FindLiveObjects: 0.196100 ms CreateObjectMapping: 0.068200 ms MarkObjects: 1.967200 ms  DeleteObjects: 0.367700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2805.562233 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Grass_Clovers_Texture_01.png
+  artifactKey: Guid(62e58f38019cb564aa4907dd7aa292fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Grass_Clovers_Texture_01.png using Guid(62e58f38019cb564aa4907dd7aa292fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08d8b2a3cd2524ff70fcec05135507b') in 0.049976 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Normals_02.png
+  artifactKey: Guid(6bc05119f4ddbdf438b92e6240f9a791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Normals_02.png using Guid(6bc05119f4ddbdf438b92e6240f9a791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b94c0b72c604cadc3f77de45c352d62') in 0.039692 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Rock_Coral_Texture_01.png
+  artifactKey: Guid(146190c538f8ebf4c9dedebbf4681049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Rock_Coral_Texture_01.png using Guid(146190c538f8ebf4c9dedebbf4681049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f42ecbaacfcfb4d8b7695c6dab108c') in 0.020062 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Texture_01.png
+  artifactKey: Guid(98a9f77fb6304fb448296c812deff4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Texture_01.png using Guid(98a9f77fb6304fb448296c812deff4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0affee51a7a6b71d2625c8896b64575') in 0.018569 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Debris_01.terrainlayer
+  artifactKey: Guid(a72bedf1e21e513408de62f5b2c6051d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Debris_01.terrainlayer using Guid(a72bedf1e21e513408de62f5b2c6051d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc4bcd2b1d3dda49d5a2a829a5f8d07') in 0.030669 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Seaweed_Sand_Normals_01.png
+  artifactKey: Guid(aa79ee3a8b3e1814aad2b6050e5877ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Seaweed_Sand_Normals_01.png using Guid(aa79ee3a8b3e1814aad2b6050e5877ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6cf13d47d8cfb82b4abf93f08b5d7dd') in 0.021374 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Grass_Debris_01.terrainlayer
+  artifactKey: Guid(b7d36012e96ef55478f157f9598fea21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Grass_Debris_01.terrainlayer using Guid(b7d36012e96ef55478f157f9598fea21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e5f823c5ee143addd8927129cc47d1d') in 0.022277 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Wavy_01.terrainlayer
+  artifactKey: Guid(0c68697d26e14864486b9261db170851) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Wavy_01.terrainlayer using Guid(0c68697d26e14864486b9261db170851) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f330e76a27a73c5487216f1aa9b56ad8') in 0.023102 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Normals_01.png
+  artifactKey: Guid(fc3c5033a6f0f9a4eb80493b29824874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Normals_01.png using Guid(fc3c5033a6f0f9a4eb80493b29824874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c297ef0d09c13cbf24fb53707c507a8b') in 0.021078 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Ruin_Tiles_Normals_01.png
+  artifactKey: Guid(16e77de1ef34d6a488acd13245395a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Ruin_Tiles_Normals_01.png using Guid(16e77de1ef34d6a488acd13245395a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92dc26519befe04b09d6edf602daa0e6') in 0.035493 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Normals_02.png
+  artifactKey: Guid(1d9b5f69b365d684dabb82da39eb4a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Normals_02.png using Guid(1d9b5f69b365d684dabb82da39eb4a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50457a263810faf558b7614875bf8406') in 0.026255 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Ground_Normals_01.png
+  artifactKey: Guid(1a018b6f61a05884e82b451efb55dba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Ground_Normals_01.png using Guid(1a018b6f61a05884e82b451efb55dba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33ef86a155b989139f6d26755906d1c7') in 0.020950 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Normals_01.png
+  artifactKey: Guid(a0e83d61489b04e4083afe5002e4d3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Normals_01.png using Guid(a0e83d61489b04e4083afe5002e4d3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22d6d6e9b4cd337f1cf2c2f5592eb578') in 0.020174 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Texture_01.png
+  artifactKey: Guid(c3f8c8fe14d14ab49ac1b32011119754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Texture_01.png using Guid(c3f8c8fe14d14ab49ac1b32011119754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41e274c36b4874c8b09cf04f83a71e0f') in 0.020870 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Rock_Normals_01.png
+  artifactKey: Guid(1498da8db984e44448d2c3757b1ce0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Rock_Normals_01.png using Guid(1498da8db984e44448d2c3757b1ce0a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e866b483d1ee71be2e87a3a92cc47073') in 0.021401 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Angle_Texture_01.png
+  artifactKey: Guid(bee599b487e13704994d3fcd3ed9c0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Angle_Texture_01.png using Guid(bee599b487e13704994d3fcd3ed9c0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba39e597ce17934a2c124436a4484943') in 0.020010 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Grass_Texture_01.png
+  artifactKey: Guid(bb0c2d617ec649d4b90b166e8bd3776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Grass_Texture_01.png using Guid(bb0c2d617ec649d4b90b166e8bd3776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '444295bf15ed510fc99ed53750586292') in 0.021072 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Pebbles_Texture_01.png
+  artifactKey: Guid(325441145d1db1d409f5d10960019740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Pebbles_Texture_01.png using Guid(325441145d1db1d409f5d10960019740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6df70e217a32d997968aaa9aac70f3ea') in 0.020642 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Debris_Normals_01.png
+  artifactKey: Guid(5c01c344c49476e4a86fbcbd5ec264bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Debris_Normals_01.png using Guid(5c01c344c49476e4a86fbcbd5ec264bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bf94130ca02abc25c9de501352c04eb') in 0.020708 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Texture_02.png
+  artifactKey: Guid(f4b83bfcf39dae64ba63faf519a4a5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Sand_Wavy_Texture_02.png using Guid(f4b83bfcf39dae64ba63faf519a4a5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f926d81b0ac0b9739c65e4972475696c') in 0.020816 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Wavy_Alt_02.terrainlayer
+  artifactKey: Guid(5f6451feb00354b48aa2510d9692c640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Terrain/Terrain_Sand_Wavy_Alt_02.terrainlayer using Guid(5f6451feb00354b48aa2510d9692c640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc73b7c2efd38c86ff092f012feb444a') in 0.022818 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 4176.495397 seconds.
+  path: Assets/nTools/PrefabPainter/Examples/Prefabs/tree1.prefab
+  artifactKey: Guid(8e66ff4afa28c4be7821a9ae9372d1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/tree1.prefab using Guid(8e66ff4afa28c4be7821a9ae9372d1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12ea31c7aef8a488ae775083d0af9434') in 0.034761 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Cave_01.prefab
+  artifactKey: Guid(29ba4fe0ad079494f8498d4873be3018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Cave_01.prefab using Guid(29ba4fe0ad079494f8498d4873be3018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9aa86cd8669dc6d06d82c7f86b4c10b') in 0.012224 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/nTools/PrefabPainter/Examples/Prefabs/tree3.prefab
+  artifactKey: Guid(0dd60fda408f047bfb07894449319218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/tree3.prefab using Guid(0dd60fda408f047bfb07894449319218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd270f0b4fc882d6fb9b648c0a39ca3fc') in 0.007482 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Prefabs/Environments/SM_Env_Cactus_01.prefab
+  artifactKey: Guid(05a0c8e6b527de943bd4968427568c0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Prefabs/Environments/SM_Env_Cactus_01.prefab using Guid(05a0c8e6b527de943bd4968427568c0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ab1a59fd3a1c63df9ad3ddf4f5939d') in 0.010758 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Prefabs/Environments/SM_Env_TreeDead_02.prefab
+  artifactKey: Guid(27359732a6cf128469a884754abfa7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Prefabs/Environments/SM_Env_TreeDead_02.prefab using Guid(27359732a6cf128469a884754abfa7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '488ca80f5f366e368bd18a40f46fb0b0') in 0.008393 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Ground_01.prefab
+  artifactKey: Guid(013ef45bfe36704438428907760e8b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Ground_01.prefab using Guid(013ef45bfe36704438428907760e8b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '576f70fc7406baca141a4559cd00a53a') in 0.009581 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000007 seconds.
+  path: Assets/PolygonWestern/Prefabs/Environments/SM_Env_Cactus_02.prefab
+  artifactKey: Guid(d87dddf59b9a1ae4e9ed874abb4bde02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonWestern/Prefabs/Environments/SM_Env_Cactus_02.prefab using Guid(d87dddf59b9a1ae4e9ed874abb4bde02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9615c5cab37b4028ae1980f9fb795027') in 0.011091 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Pile_01.prefab
+  artifactKey: Guid(896fdfe6e60f4fc468a61577579d60f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Pile_01.prefab using Guid(896fdfe6e60f4fc468a61577579d60f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b10f12694d97d4eda79f6ef48e46ea85') in 0.008629 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_04.prefab
+  artifactKey: Guid(7045b6930678b364aa335e2fc50e6c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_04.prefab using Guid(7045b6930678b364aa335e2fc50e6c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8b700686382073ada288d8cd8189c07') in 0.008905 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_03.prefab
+  artifactKey: Guid(c0e8e30f5b60cfd42904d5ec507e87b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_03.prefab using Guid(c0e8e30f5b60cfd42904d5ec507e87b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd05565359622f07bc6fa4a4b21cef11') in 0.008923 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000008 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_01.prefab
+  artifactKey: Guid(a8b45bb4d555207469b7356c92071ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_01.prefab using Guid(a8b45bb4d555207469b7356c92071ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193d99f292e3021d60dc5419c4a5c97f') in 0.008563 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/nTools/PrefabPainter/Examples/Prefabs/tree4.prefab
+  artifactKey: Guid(ba260558c316b4cda92178dc6fef1161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/tree4.prefab using Guid(ba260558c316b4cda92178dc6fef1161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c04842b2690e53273be615c1b43a5e8b') in 0.008424 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Spikes_01.prefab
+  artifactKey: Guid(e96d6d8ea1b343741b300dc0e471e442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Rock_Spikes_01.prefab using Guid(e96d6d8ea1b343741b300dc0e471e442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df25edcf485bde824f7657ecf6f8a327') in 0.009459 seconds 
+Number of asset objects unloaded after import = 17
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
