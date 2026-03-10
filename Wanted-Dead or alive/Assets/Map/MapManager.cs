@@ -12,6 +12,9 @@ public class MapManager : MonoBehaviour
     [Header("Ovládání")]
     [SerializeField] private MouseLook mouseLook;
 
+    [Header("Map Rendering")]
+    public Camera largeMapCamera;
+
     private bool isMapOpen = false;
 
     void Start()
@@ -49,6 +52,7 @@ public class MapManager : MonoBehaviour
     void OpenMap()
     {
         mapWindow.SetActive(true);
+        largeMapCamera.enabled = true;
         UpdateQuestUI();
 
         if (mouseLook != null) mouseLook.canMove = false;
@@ -59,6 +63,7 @@ public class MapManager : MonoBehaviour
     void CloseMap()
     {
         mapWindow.SetActive(false);
+        largeMapCamera.enabled = false;
 
         if (mouseLook != null) mouseLook.canMove = true;
         Cursor.lockState = CursorLockMode.Locked;

@@ -15,7 +15,7 @@ C:/Users/simon/OneDrive/Dokumenty/GitHub/The-Last-Bounty/Wanted-Dead or alive
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-53717
+51453
 Successfully changed project path to: C:/Users/simon/OneDrive/Dokumenty/GitHub/The-Last-Bounty/Wanted-Dead or alive
 C:/Users/simon/OneDrive/Dokumenty/GitHub/The-Last-Bounty/Wanted-Dead or alive
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,12 +47,12 @@ C:/Users/simon/OneDrive/Dokumenty/GitHub/The-Last-Bounty/Wanted-Dead or alive
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [33164] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3186970234 [EditorId] 3186970234 [Version] 1048832 [Id] WindowsEditor(7,SimonRuza) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [29364] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3648096713 [EditorId] 3648096713 [Version] 1048832 [Id] WindowsEditor(7,SimonRuza) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [33164] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3186970234 [EditorId] 3186970234 [Version] 1048832 [Id] WindowsEditor(7,SimonRuza) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [29364] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3648096713 [EditorId] 3648096713 [Version] 1048832 [Id] WindowsEditor(7,SimonRuza) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
-Refreshing native plugins compatible for Editor in 126.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 121.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.32f1 (3b9dae9532f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Resources/UnitySubsystems
@@ -68,87 +68,87 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006641 seconds.
+Registered in 0.005325 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 115.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 103.23 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.704 seconds
+- Completed reload, in  0.633 seconds
 Domain Reload Profiling:
-	ReloadAssembly (704ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (633ms)
+		BeginReloadAssembly (103ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (520ms)
-			LoadAssemblies (88ms)
+		EndReloadAssembly (447ms)
+			LoadAssemblies (100ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (126ms)
+			SetupTypeCache (93ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (304ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (289ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (115ms)
+				RefreshPlugins (103ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (122ms)
-				ProcessInitializeOnLoadMethodAttributes (58ms)
+				ProcessInitializeOnLoadAttributes (123ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008526 seconds.
+Registered in 0.005602 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 100.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 112.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.368 seconds
+- Completed reload, in  1.433 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1369ms)
-		BeginReloadAssembly (201ms)
+	ReloadAssembly (1435ms)
+		BeginReloadAssembly (136ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (39ms)
-		EndReloadAssembly (1038ms)
-			LoadAssemblies (136ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1199ms)
+			LoadAssemblies (115ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (286ms)
+			SetupTypeCache (274ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (580ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (685ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (101ms)
-				BeforeProcessingInitializeOnLoad (84ms)
-				ProcessInitializeOnLoadAttributes (368ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (456ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4072 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (2.7 MB). Loaded Objects now: 4538.
-Memory consumption went from 183.9 MB to 181.2 MB.
-Total: 4.901900 ms (FindLiveObjects: 0.410700 ms CreateObjectMapping: 0.232600 ms MarkObjects: 3.478700 ms  DeleteObjects: 0.778400 ms)
+Unloading 4073 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (2.7 MB). Loaded Objects now: 4537.
+Memory consumption went from 183.8 MB to 181.1 MB.
+Total: 4.569800 ms (FindLiveObjects: 0.348400 ms CreateObjectMapping: 0.168500 ms MarkObjects: 3.532500 ms  DeleteObjects: 0.519200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,116 +165,165 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 8844.229914 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Grass_Med_Clump_01.fbx
-  artifactKey: Guid(44848de2ade97854bb1d834e40feaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 5095.314403 seconds.
+  path: Assets/nTools/PrefabPainter/GUI/TagIcon.png
+  artifactKey: Guid(5454cc141383b465da00393aaa7615b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Models/SM_Env_Grass_Med_Clump_01.fbx using Guid(44848de2ade97854bb1d834e40feaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b687565da6e8262a5326207d0a8dedb') in 0.213581 seconds 
-Number of asset objects unloaded after import = 15
+Start importing Assets/nTools/PrefabPainter/GUI/TagIcon.png using Guid(5454cc141383b465da00393aaa7615b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d45dcba7c32f04f36e6b8823573509') in 0.091201 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 15.418748 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Short_Clump_02.prefab
-  artifactKey: Guid(6390209abbab74a4e90e15a5081f195b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/pohutukawaLeaf.tga
+  artifactKey: Guid(b01364d2d36e2c444820d4e9d56a1b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Short_Clump_02.prefab using Guid(6390209abbab74a4e90e15a5081f195b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc185999e3a349a9f59c1226863f6c05') in 0.102641 seconds 
-Number of asset objects unloaded after import = 23
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Plants/pohutukawaLeaf.tga using Guid(b01364d2d36e2c444820d4e9d56a1b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6f606e4b80e79f25ad0b83b91ccdcc') in 0.027370 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Tall_Plane_01.prefab
-  artifactKey: Guid(d5ea0befb9521514a82f2ca44ad9c8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Core/Textures/Noise_Big.tga
+  artifactKey: Guid(796e3706ceb704247adb957915a9edaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Tall_Plane_01.prefab using Guid(d5ea0befb9521514a82f2ca44ad9c8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57ddbce7df096c1b34add83dff481d1') in 0.026260 seconds 
-Number of asset objects unloaded after import = 20
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Short_Clump_03.prefab
-  artifactKey: Guid(8578e5a32dd395c40940cbc0879f13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Prefabs/SM_Env_Grass_Short_Clump_03.prefab using Guid(8578e5a32dd395c40940cbc0879f13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '393f34c529f449bf2e5878f1012bc250') in 0.025920 seconds 
-Number of asset objects unloaded after import = 28
-========================================================================
-Received Import Request.
-  Time since last request: 59.417777 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Prefabs/book_b.prefab
-  artifactKey: Guid(aae38cd2299054ce9a800d5aadc0e100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/book_b.prefab using Guid(aae38cd2299054ce9a800d5aadc0e100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c162f3f82d6bdbd49540b68117fad23') in 0.041876 seconds 
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/PolygonPirates/Prefabs/Characters/Character_Skeleton_01.prefab
-  artifactKey: Guid(fe1cffe6ed7a7ff4798b18c00b0358e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Characters/Character_Skeleton_01.prefab using Guid(fe1cffe6ed7a7ff4798b18c00b0358e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2caf81f95cae778d650f131b919457cd') in 0.096500 seconds 
-Number of asset objects unloaded after import = 316
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/PolygonPirates/Prefabs/Characters/Character_Pirate_Blackbeard_01.prefab
-  artifactKey: Guid(bc4987e2fb189ec4d96488b047577016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Characters/Character_Pirate_Blackbeard_01.prefab using Guid(bc4987e2fb189ec4d96488b047577016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a5347709b018fd272f78966b5f0813') in 0.031163 seconds 
-Number of asset objects unloaded after import = 316
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Models/book_c.fbx
-  artifactKey: Guid(1d749cc84bdfb4da08f42860573c3625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Models/book_c.fbx using Guid(1d749cc84bdfb4da08f42860573c3625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7dc1c3ab9f3924014bae95fd1ca75a0') in 0.041830 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Models/cab_b.fbx
-  artifactKey: Guid(4314e7424272d465d84d44575049f8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Models/cab_b.fbx using Guid(4314e7424272d465d84d44575049f8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f0f1389e16f55661d71e0f1aa32b7b') in 0.014909 seconds 
-Number of asset objects unloaded after import = 7
+Start importing Assets/PolygonNatureBiomes/PNB_Core/Textures/Noise_Big.tga using Guid(796e3706ceb704247adb957915a9edaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04b0ca7012c5418cb34e297c26a19492') in 0.016778 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000025 seconds.
-  path: Assets/PolygonWestern/Prefabs/Characters/Character_Cowboy_01.prefab
-  artifactKey: Guid(e169e4d9dbd157b498e582065a5f9302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Occulsion/Palm_Bark_01_Occlusion.png
+  artifactKey: Guid(4c6ba1b08eaa4ba428f72639ae2ef1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonWestern/Prefabs/Characters/Character_Cowboy_01.prefab using Guid(e169e4d9dbd157b498e582065a5f9302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b1d3a621ff7d9bc7503e08ddb389f8a') in 0.052236 seconds 
-Number of asset objects unloaded after import = 139
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/Occulsion/Palm_Bark_01_Occlusion.png using Guid(4c6ba1b08eaa4ba428f72639ae2ef1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37cf58f3c9bca03e986f27ad82e382d9') in 0.024982 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Prefabs/book_d.prefab
-  artifactKey: Guid(a2fa6ff3c15d6494c9050e9e701060c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.325427 seconds.
+  path: Assets/nTools/PrefabPainter/GUI/ThrowTool_HIDPI.png
+  artifactKey: Guid(a381f37c7ab9a4c7aa232f48a7836d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/book_d.prefab using Guid(a2fa6ff3c15d6494c9050e9e701060c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ca28bdc6f71afd6468157059befd7d0') in 0.032881 seconds 
-Number of asset objects unloaded after import = 21
+Start importing Assets/nTools/PrefabPainter/GUI/ThrowTool_HIDPI.png using Guid(a381f37c7ab9a4c7aa232f48a7836d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c68383a3b68a7b391c3ea16bde0427') in 0.021858 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treeForest_01.tga
+  artifactKey: Guid(646e47c87db0fdc46be67c579515a36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treeForest_01.tga using Guid(646e47c87db0fdc46be67c579515a36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fea57c7e9d027fff22cf0f59d2634cca') in 0.030149 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePalm_01_Normals.tga
+  artifactKey: Guid(8d8b0302351de904485af770e4712f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePalm_01_Normals.tga using Guid(8d8b0302351de904485af770e4712f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06121834f8cfbf26a02d88b4033cf396') in 0.029155 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePalm_02.tga
+  artifactKey: Guid(cf02f3d9fef29c84c92fc0c54336c1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePalm_02.tga using Guid(cf02f3d9fef29c84c92fc0c54336c1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d59bab4d129e1126926ff5a7393ec42') in 0.025642 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/PolygonPirates/Prefabs/Characters/Character_Skeleton_02.prefab
-  artifactKey: Guid(27953ea55848f7a48897c38360d8b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treeForest_02.tga
+  artifactKey: Guid(94602ded8fad32941b52faec83586a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/PolygonPirates/Prefabs/Characters/Character_Skeleton_02.prefab using Guid(27953ea55848f7a48897c38360d8b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17267489e6514fb9a02c7a47f3263d39') in 0.022012 seconds 
-Number of asset objects unloaded after import = 316
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treeForest_02.tga using Guid(94602ded8fad32941b52faec83586a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15adb316e19e72efc84ca26351fd7fd1') in 0.028924 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Models/decal3.fbx
-  artifactKey: Guid(0538f469620a34a5b880fbc0250acf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.784129 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_02.tga
+  artifactKey: Guid(0645a1cee22dea040b009c710d6c4078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Models/decal3.fbx using Guid(0538f469620a34a5b880fbc0250acf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bfc32c49bd6e0b2ebbad9a55ad05408') in 0.017597 seconds 
-Number of asset objects unloaded after import = 7
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_02.tga using Guid(0645a1cee22dea040b009c710d6c4078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f572d0eb367e025cd34ff348994c8f80') in 0.026725 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/nTools/PrefabPainter/Examples/Prefabs/decal4.prefab
-  artifactKey: Guid(d56ef037a2ece46958febec692c028c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000037 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_03_Normals.tga
+  artifactKey: Guid(47c05bc2e5ce3ef498f812b0316de37e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/nTools/PrefabPainter/Examples/Prefabs/decal4.prefab using Guid(d56ef037a2ece46958febec692c028c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024944786b84cb108048fceac1399dd1') in 0.221318 seconds 
-Number of asset objects unloaded after import = 9
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_03_Normals.tga using Guid(47c05bc2e5ce3ef498f812b0316de37e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159fb133369a53055eff6d3c971931da') in 0.030196 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_02_Normals.tga
+  artifactKey: Guid(9de1038b1194f5844b5d63fd99b67a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_02_Normals.tga using Guid(9de1038b1194f5844b5d63fd99b67a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b75a4a9f742258317bbd13a889a913') in 0.026524 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_04.tga
+  artifactKey: Guid(49652423e7eb46b429eea37d1089ef3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/PolygonNatureBiomes/PNB_Tropical_Jungle/Textures/LOD_Cards/treePohutukawa_04.tga using Guid(49652423e7eb46b429eea37d1089ef3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f219ad763ee33320068e6e3609905198') in 0.023775 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007774 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.266 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1266ms)
+		BeginReloadAssembly (163ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1004ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (325ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (499ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (379ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3973 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (2.7 MB). Loaded Objects now: 4545.
+Memory consumption went from 173.7 MB to 171.0 MB.
+Total: 3.252500 ms (FindLiveObjects: 0.344300 ms CreateObjectMapping: 0.162900 ms MarkObjects: 2.303900 ms  DeleteObjects: 0.440100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
