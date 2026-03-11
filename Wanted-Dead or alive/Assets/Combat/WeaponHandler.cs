@@ -4,6 +4,7 @@ public class WeaponHandler : MonoBehaviour
 {
     public Transform weaponHolder;
     public LayerMask enemyLayer;
+    public LayerMask targetLayer;
 
     [Header("UI Crosshair")]
     public GameObject crosshairUI;
@@ -100,13 +101,21 @@ public class WeaponHandler : MonoBehaviour
             if (weaponSwingSound != null) weaponAudioSource.PlayOneShot(weaponSwingSound);
         }
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, currentWeapon.weaponRange, enemyLayer))
+        LayerMask hitMask = enemyLayer | targetLayer;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, currentWeapon.weaponRange, hitMask))
         {
             EnemyHealth enemy = hit.collider.GetComponentInParent<EnemyHealth>();
 
             if (enemy != null)
             {
                 enemy.TakeDamage(currentWeapon.weaponDamage);
+            }
+
+            BottleTarget bottle = hit.collider.GetComponent<BottleTarget>();
+            if (bottle != null)
+            {
+                bottle.Shatter(hit.point, Camera.main.transform.forward);
+                ShootingRangeManager.Instance.AddScore(); // Pøiète bod!
             }
         }
     }
