@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253500472716172036}
   - component: {fileID: 3264594768243647798}
+  - component: {fileID: 5345715876012473157}
   m_Layer: 10
   m_Name: Bottle
   m_TagString: Untagged
@@ -49,6 +50,19 @@ MonoBehaviour:
   shatterVFX: {fileID: 8394845287231294502, guid: 01a72f5c56d93fe48b6b173db160c333, type: 3}
   hitForce: 50
   cleanupTime: 3
+--- !u!65 &5345715876012473157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180177820609441035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27290386, y: 0.72316873, z: 0.1992903}
+  m_Center: {x: 0.0054504275, y: 0.35964048, z: 0.0013086498}
 --- !u!1001 &1859927000944684951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,6 +132,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4972010260527850, guid: efd58ab25710d5d4b9c4c14f897337de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64969295375821950, guid: efd58ab25710d5d4b9c4c14f897337de, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

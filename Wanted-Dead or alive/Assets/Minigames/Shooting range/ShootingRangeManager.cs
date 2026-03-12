@@ -1,23 +1,35 @@
 using UnityEngine;
-using UnityEngine.UI; // Zmìna: Používáme základní UI knihovnu místo TMPro
+using UnityEngine.UI;
 
 public class ShootingRangeManager : MonoBehaviour
 {
     public static ShootingRangeManager Instance;
 
     [Header("UI Panely")]
-    public GameObject startMenuUI; // Panel s tlacitkem Hrat a Highscore
-    public GameObject gameHUD;     // Panel s casovacem a skore nahore vpravo
+    public GameObject startMenuUI;
+    public GameObject gameHUD;
+    public GameObject resultMenuUI; // NOVÉ: Panel s výsledkem na konci hry
 
     [Header("UI Texty (Legacy)")]
-    public Text highScoreText;    // Zmìnìno z TextMeshProUGUI na Text
-    public Text currentScoreText; // Zmìnìno z TextMeshProUGUI na Text
-    public Text timerText;        // Zmìnìno z TextMeshProUGUI na Text
+    public Text highScoreText;
+    public Text currentScoreText;
+    public Text timerText;
+    public Text finalScoreText;    // NOVÉ: Text, který ukáže skóre na konci
+
+    [Header("Hráè a Omezení pohybu")]
+    public MouseLook mouseLook;
+    public CharacterController playerController;
+
+    [Header("Spawner Flašek")]
+    public GameObject bottlePrefab;
+    public Transform[] spawnPoints;
+    public float spawnInterval = 1.5f;
 
     [Header("Nastavení Minihry")]
-    public float gameDuration = 30f; // Jak dlouho minihra trva
+    public float gameDuration = 30f;
 
     private float timer;
+    private float bottleTimer;
     private int currentScore;
     private bool isPlaying = false;
 
@@ -26,39 +38,46 @@ public class ShootingRangeManager : MonoBehaviour
         Instance = this;
         startMenuUI.SetActive(false);
         gameHUD.SetActive(false);
+        resultMenuUI.SetActive(false); // Ujistíme se, že je panel na zaèátku vypnutý
     }
 
     public void OpenMenu()
     {
-        // Nacte highscore ulozene v pocitaci (pokud neni, vrati 0)
         int bestScore = PlayerPrefs.GetInt("ShootingHighScore", 0);
         highScoreText.text = "Highest Score: " + bestScore;
 
+        if (mouseLook != null) mouseLook.canMove = false;
         startMenuUI.SetActive(true);
     }
 
     public void CloseMenu()
     {
         startMenuUI.SetActive(false);
+
+        if (mouseLook != null) mouseLook.canMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        FindObjectOfType<Interactor>().SendMessage("EndInteraction");
     }
 
-    // Tuhle funkci napoj na OnClick event toho UI tlacitka "Hrát"
     public void StartGame()
     {
         startMenuUI.SetActive(false);
         gameHUD.SetActive(true);
 
-        // Znovu zamkneme kurzor do hry, protoze ho Interactor odemkl kvuli UI
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        if (mouseLook != null) mouseLook.canMove = true;
+        if (playerController != null) playerController.enabled = false;
+
         currentScore = 0;
         timer = gameDuration;
+        bottleTimer = 0f;
         isPlaying = true;
 
         UpdateUI();
-
-        // ZDE POZDEJI PRIDAME FUNKCI NA SPAWNOVANI FLASEK
     }
 
     private void Update()
@@ -66,19 +85,35 @@ public class ShootingRangeManager : MonoBehaviour
         if (!isPlaying) return;
 
         timer -= Time.deltaTime;
-
-        // Formátuje èas jako sekundy s jedním desetinným místem
         timerText.text = timer.ToString("F1") + "s";
+
+        bottleTimer -= Time.deltaTime;
+        if (bottleTimer <= 0)
+        {
+            SpawnBottle();
+            bottleTimer = spawnInterval;
+        }
 
         if (timer <= 0)
         {
-            EndGame();
+            EndGame(); // Èas vypršel, spustíme konec
         }
+    }
+
+    private void SpawnBottle()
+    {
+        if (spawnPoints.Length == 0 || bottlePrefab == null) return;
+
+        int randomIndex = Random.Range(0, spawnPoints.Length);
+        Transform spawnPoint = spawnPoints[randomIndex];
+
+        GameObject newBottle = Instantiate(bottlePrefab, spawnPoint.position, spawnPoint.rotation);
+        Destroy(newBottle, spawnInterval + 0.5f);
     }
 
     public void AddScore()
     {
-        if (!isPlaying) return; // Pokud hra nebezi, nedavej body
+        if (!isPlaying) return;
 
         currentScore++;
         UpdateUI();
@@ -92,9 +127,9 @@ public class ShootingRangeManager : MonoBehaviour
     private void EndGame()
     {
         isPlaying = false;
-        gameHUD.SetActive(false);
+        gameHUD.SetActive(false); // Vypneme HUD s èasomírou
 
-        // Ulozi Highscore pokud je vetsi nez predesle
+        // Uložení Highscore
         int bestScore = PlayerPrefs.GetInt("ShootingHighScore", 0);
         if (currentScore > bestScore)
         {
@@ -102,9 +137,28 @@ public class ShootingRangeManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        // Ukoncime interakci, coz vrati chod hry do normalu
-        FindObjectOfType<Interactor>().SendMessage("EndInteraction");
+        // --- NOVÉ: Zobrazení výsledku ---
+        finalScoreText.text = "Konecne skore: " + currentScore;
+        resultMenuUI.SetActive(true);
 
-        // Tady pak mùžeme pøidat i odmìnu za støelbu (+5% pøesnost), jak máš v konceptu
+        // Odemkneme kurzor a zamkneme kameru, aby hráè mohl kliknout na "Odejít"
+        if (mouseLook != null) mouseLook.canMove = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    // Tuhle funkci pøidáš na tlaèítko "Pokraèovat/Zavøít" v tom novém Result panelu
+    public void CloseResultMenu()
+    {
+        resultMenuUI.SetActive(false);
+
+        // Vrátíme chod hry úplnì do normálu
+        if (playerController != null) playerController.enabled = true;
+        if (mouseLook != null) mouseLook.canMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        // Odstraní interakci
+        FindObjectOfType<Interactor>().SendMessage("EndInteraction");
     }
 }

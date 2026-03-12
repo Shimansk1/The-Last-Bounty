@@ -78,6 +78,7 @@
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\InventoryHolder.cs" />
     <Compile Include="Assets\SceneManagment\SettingsOpener.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\Database.cs" />
+    <Compile Include="Assets\Minigames\Shooting range\BottleTarget.cs" />
     <Compile Include="Assets\Other\CraftingSystem.cs" />
     <Compile Include="Assets\Other\RainSplashManager.cs" />
     <Compile Include="Assets\SceneManagment\SaveLoadCanvas.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSettings.cs" />
     <Compile Include="Assets\DialogSystem\DialogManager.cs" />
     <Compile Include="Assets\Other\CanteenUI.cs" />
+    <Compile Include="Assets\Minigames\Shooting range\ShootingRangeInteractable.cs" />
     <Compile Include="Assets\InventoryScripts\InventoryScriptss\PlayerInventoryHolder.cs" />
     <Compile Include="Assets\SceneManagment\SceneSwitch.cs" />
     <Compile Include="Assets\Movement\TrainDoor.cs" />
@@ -117,7 +119,7 @@
     <Compile Include="Assets\Reputation\CityName.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\InventoryItemData.cs" />
     <Compile Include="Assets\Combat\EnemyLootDropper.cs" />
-    <Compile Include="Assets\ShopManager.cs" />
+    <Compile Include="Assets\Quest\ShopManager.cs" />
     <Compile Include="Assets\Combat\Billboard.cs" />
     <Compile Include="Assets\Map\FullMapIcon.cs" />
     <Compile Include="Assets\InventoryScripts\ItemScripts\ItemPickup.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Assets\InteractionPromptUI.cs" />
     <Compile Include="Assets\SaveLoad\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Combat\EnemyAI.cs" />
+    <Compile Include="Assets\Minigames\Shooting range\ShootingRangeManager.cs" />
     <Compile Include="Assets\Other\CoconutSpawner.cs" />
     <Compile Include="Assets\Movement\MouseLook.cs" />
     <Compile Include="Assets\Other\RumBarrelInteractable.cs" />
@@ -139,18 +142,21 @@
     <Compile Include="Assets\Combat\EnemySpawner.cs" />
     <Compile Include="Assets\Movement\HorseMovement.cs" />
     <Compile Include="Assets\nTools\PrefabPainter\Scripts\PrefabPainterSceneSettings.cs" />
+    <Compile Include="Assets\Minigames\Dice\Dice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CrystalShader.shader" />
     <None Include="Assets\nTools\PrefabPainter\Shaders\GUITextureClipLevels.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Collection Dice set for role-playing games\Documentation\Readmy.txt" />
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_WaterScrolling.shader" />
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_Basic_LOD_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_GlacierIce.shader" />
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CloudShader_NoFog.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\kenney_particle-pack\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CloudShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />

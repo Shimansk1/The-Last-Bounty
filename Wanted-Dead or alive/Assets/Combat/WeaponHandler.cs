@@ -102,10 +102,10 @@ public class WeaponHandler : MonoBehaviour
         }
 
         LayerMask hitMask = enemyLayer | targetLayer;
+
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, currentWeapon.weaponRange, hitMask))
         {
             EnemyHealth enemy = hit.collider.GetComponentInParent<EnemyHealth>();
-
             if (enemy != null)
             {
                 enemy.TakeDamage(currentWeapon.weaponDamage);
@@ -115,7 +115,11 @@ public class WeaponHandler : MonoBehaviour
             if (bottle != null)
             {
                 bottle.Shatter(hit.point, Camera.main.transform.forward);
-                ShootingRangeManager.Instance.AddScore(); // Pøiète bod!
+
+                if (ShootingRangeManager.Instance != null)
+                {
+                    ShootingRangeManager.Instance.AddScore();
+                }
             }
         }
     }
