@@ -89,6 +89,8 @@ k plnění hlavních úkolů. Zde je upřesnění, kam přesně musíte jít:
 * Úkol Učenec: Situace je stejná jako u Karbaníka. Učence najdete v lokaci 
   "Desert outpost".
 * Úkol Pravá ruka El Diabla: Tohoto bosse najdete v lokaci "Ghost town".
+* Finální úkol El Diablo: V instrukcích chybí přesná poloha. El Diabla 
+  najdete schovaného mezi horami na jihovýchodě mapy.
 
 --------------------------------------------------------------------------------
 HERNÍ CHYBY A OMEZENÍ
