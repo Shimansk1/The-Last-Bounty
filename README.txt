@@ -9,21 +9,25 @@ stále jmenuje spouštěcí soubor.
 
 Ačkoliv projekt ještě není stoprocentně kompletní (tutoriál, vedlejší úkoly a 
 některé animace nejsou plně dotažené a pár věcí chybí), už v tomto stavu má 
-hra rozhodně co nabídnout a můžete si ji naplno užít.
+hra rozhodně co nabídnout a můžete si ji naplno užít. 
+
+Rád bych také dodal, že na projektu i nadále pokračuji a usilovně pracuji 
+na tom, aby byla hra do budoucna plně funkční a dotažená do konce.
 
 --------------------------------------------------------------------------------
 JAK HRU STÁHNOUT A SPUSTIT
 --------------------------------------------------------------------------------
 
-Jelikož je hra větší, je pro snazší stažení rozdělena do dvou archivů. Pro 
-správné spuštění prosím postupujte takto:
+Jelikož je hra větší a GitHub neumožňuje nahrávat soubory nad 
+100 MB, musela být rozdělena do dvou archivů. Pro správné spuštění prosím 
+postupujte takto:
 
 1. Stáhněte si z tohoto repozitáře oba soubory: build.part1.rar a build.part2.rar.
 2. Ujistěte se, že máte oba soubory stažené do stejné složky.
-3. Klikněte pravým tlačítkem POUZE na soubor "part1.rar" a vyberte možnost 
-   Extrahovat zde (Extract here) pomocí programu WinRAR nebo 7-Zip. 
-4. Druhý soubor se rozbalí automaticky sám, nemusíte na něj vůbec klikat.
-5. Otevřete nově vzniklou složku a spusťte soubor "Wanted-Dead or alive.exe".
+3. Otevřete složku ve WinRARu a klávesovou zkratkou Ctrl + levé tlačítko myši 
+   vyberte oba buildy. Poté zvolte možnost „Extrahovat do určené složky“ a 
+   vyberte jakoukoli prázdnou složku.
+4. Otevřete složku s extrahovaným buildem a spusťte soubor "Wanted-Dead or alive.exe".
 
 --------------------------------------------------------------------------------
 OVLÁDÁNÍ A HERNÍ MECHANISMY (Rychlý tutoriál)
@@ -34,7 +38,10 @@ co budete k přežití potřebovat:
 
 !!! DŮLEŽITÉ UPOZORNĚNÍ PRO START !!!
 Aby bylo možné ve hře postoupit, MUSÍTE si hned na začátku koupit revolver 
-u zbrojaře. Bez něj se nedostanete dál!
+u zbrojaře, který je v každém městě. Bez něj se nedostanete dál!
+
+Nezapomeňte si také hlídat zásoby! Jídlo a pití můžete kdykoliv zakoupit 
+u zelináře, kterého najdete rovněž v každém městě.
 
 [ Základní pohyb ]
 * W, A, S, D - Pohyb postavy
@@ -52,8 +59,8 @@ u zbrojaře. Bez něj se nedostanete dál!
 
 [ Systém ukládání a Menu ]
 * F1 - Uložení hry
-* F2 - Načtení uložené pozice
-* F3 - Smazání uložené pozice
+* F2 - Načtení uložené hry
+* F3 - Smazání uložené hry
 * F4 - Otevření herního menu (zde si můžete vybrat, zda chcete pokračovat 
   ve hře, vrátit se do hlavního menu, nebo hru vypnout).
 
@@ -65,11 +72,17 @@ u zbrojaře. Bez něj se nedostanete dál!
   přejede, okamžitě zemřete!
 
 --------------------------------------------------------------------------------
-HERNÍ CHYBY
+HERNÍ CHYBY A OMEZENÍ
 --------------------------------------------------------------------------------
 
-V aktuální verzi se nachází jeden nepříjemný bug, na který si dejte pozor:
+V aktuální verzi se nachází pár chyb a technických omezení, na které si 
+dejte pozor:
 
+* Pevné rozlišení obrazovky: Ve hře zatím nefunguje rozhraní pro různá rozlišení. 
+  Hra je aktuálně stavěná a optimalizovaná pouze na rozlišení 2560x1440. Při 
+  jiném nastavení monitoru se může uživatelské rozhraní zobrazovat nekorektně.
+* Ovládání hlasitosti: V herním nastavení momentálně nefunguje posuvník pro 
+  změnu hlasitosti. 
 * Záhadná úmrtí na nerovném terénu: Občas se může stát, že vaše postava při 
   chůzi přes nerovnosti nebo kopce zničehonic zemře. Důrazně proto doporučujeme 
   hru často ukládat (klávesa F1)!
