@@ -6,4 +6,4 @@ Protože je hra větší, je rozdělena do dvou archivů. Pro správné spuště
 2. Ujistete se, že máte **oba soubory stažené ve stejné složce**.
 3. Kliknete **pravým tlačítkem POUZE na soubor `part1.rar`** a vyber `Extrahovat zde` (Extract here) pomocí WinRARu nebo 7-Zipu. 
 4. Druhý soubor se rozbalí automaticky sám, nemusíte na něj klikat.
-5. Otevřete nově vzniklou složku a spusťte soubor `The Last Bounty`.
+5. Otevřete nově vzniklou složku a spusťte soubor `Wanted-Dead or alive`.
