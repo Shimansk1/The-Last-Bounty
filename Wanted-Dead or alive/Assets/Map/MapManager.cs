@@ -72,22 +72,9 @@ public class MapManager : MonoBehaviour
 
     public void UpdateQuestUI()
     {
+        // 1. VEDLEJŠÍ ÚKOLY (Z tvého starého WantedQuestTrackeru)
         var tracker = WantedQuestTracker.Instance;
-        if (tracker == null) return;
-
-        if (tracker.ActiveMainContract != null)
-        {
-            WantedContract main = tracker.ActiveMainContract;
-            mainQuestText.text = $"<color=yellow>{main.contractName}</color>\n" +
-                                 $"<size=80%>{main.description}</size>\n" +
-                                 $"<color=green>Odmìna: {main.reward} $</color>";
-        }
-        else
-        {
-            mainQuestText.text = "<color=grey>Žádný aktivní hlavní kontrakt.</color>";
-        }
-
-        if (tracker.ActiveSideContract != null)
+        if (tracker != null && tracker.ActiveSideContract != null)
         {
             WantedContract side = tracker.ActiveSideContract;
             sideQuestText.text = $"<color=white>{side.contractName}</color>\n" +
@@ -96,7 +83,22 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            sideQuestText.text = "<color=grey>Žádný vedlejší kontrakt.</color>";
+            sideQuestText.text = "<color=grey>Žádný aktivní vedlejší kontrakt.</color>";
+        }
+
+        // 2. HLAVNÍ ÚKOL (Ze zbrusu nového MainStoryManageru)
+        if (MainStoryManager.Instance != null)
+        {
+            string qName = MainStoryManager.Instance.GetQuestName();
+            string qDesc = MainStoryManager.Instance.GetQuestDescription();
+
+            mainQuestText.text = $"<color=yellow>{qName}</color>\n" +
+                                 $"<size=80%>{qDesc}</size>\n" +
+                                 $"<color=green>Hlavní pøíbìh</color>";
+        }
+        else
+        {
+            mainQuestText.text = "<color=grey>Pøíbìh není dostupný.</color>";
         }
     }
 }

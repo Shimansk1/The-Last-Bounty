@@ -16,10 +16,9 @@ public class HorseInteraction : MonoBehaviour, IInteractable
     public HorseMovement horseMovement;
     public PlayerMovementScript playerScript;
     public CharacterController playerController;
+    public PlayerHealth playerHealth;
 
     private bool isRiding = false;
-
-    // NOVÉ: Promìnná pro èas, kdy jsme nasedli
     private float mountTime;
 
     public UnityAction<IInteractable> OnInteractionComplete { get; set; }
@@ -33,8 +32,6 @@ public class HorseInteraction : MonoBehaviour, IInteractable
 
     void Update()
     {
-        // NOVÉ: Pøidána podmínka (Time.time > mountTime + 1f)
-        // Znamená to: "Pokud uplynula aspoò 1 vteøina od nasednutí"
         if (isRiding && Input.GetKeyDown(KeyCode.E) && Time.time > mountTime + 1f)
         {
             Dismount();
@@ -63,10 +60,15 @@ public class HorseInteraction : MonoBehaviour, IInteractable
     void Mount()
     {
         isRiding = true;
-
-        // NOVÉ: Uložíme si aktuální èas nasednutí
         mountTime = Time.time;
 
+        if (playerHealth != null)
+        {
+            playerHealth.isInvulnerable = true;
+            playerHealth.ResetFallPosition();
+        }
+
+        playerScript.ResetVelocity();
         playerScript.enabled = false;
         playerController.enabled = false;
 
@@ -88,6 +90,13 @@ public class HorseInteraction : MonoBehaviour, IInteractable
         player.transform.position = dismountPos.position;
         player.transform.rotation = dismountPos.rotation;
 
+        if (playerHealth != null)
+        {
+            playerHealth.isInvulnerable = false;
+            playerHealth.ResetFallPosition();
+        }
+
+        playerScript.ResetVelocity();
         playerController.enabled = true;
         playerScript.enabled = true;
 

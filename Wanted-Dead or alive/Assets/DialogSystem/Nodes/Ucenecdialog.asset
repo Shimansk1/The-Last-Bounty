@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8539c1127e5b8cb4cb5b35faffb11f0a, type: 3}
+  m_Name: Ucenecdialog
+  m_EditorClassIdentifier: 
+  dialogText: "Ten dopis ti p\u0159elo\u017E\xEDm ale nejd\u0159\xEDv mi mus\xED\u0161
+    p\u0159in\u011Bst m\xE9 ztracen\xE9 zlate cihly"
+  responses:
+  - responseText: "Dob\u0159e, kde je najdu?"
+    nextNode: {fileID: 11400000, guid: 4eb3ae51931ef704bb9486aabaec110d, type: 2}
+    triggersShop: 0
+    isExit: 0
+    triggersDuel: 0
+    advancesStory: 0
+    storyStateToSet: 0
+    requiredItemToClick: {fileID: 0}
+    removesItemOnSubmit: 0
+  - responseText: "Tady je m\xE1te"
+    nextNode: {fileID: 0}
+    triggersShop: 0
+    isExit: 1
+    triggersDuel: 0
+    advancesStory: 1
+    storyStateToSet: 4
+    requiredItemToClick: {fileID: 11400000, guid: 71aa814c24146614dbec269c6f411706, type: 2}
+    removesItemOnSubmit: 1

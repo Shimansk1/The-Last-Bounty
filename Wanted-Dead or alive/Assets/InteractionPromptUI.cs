@@ -1,11 +1,9 @@
 using UnityEngine;
-using TMPro;
 
 public class InteractionPromptUI : MonoBehaviour
 {
     [Header("UI Reference")]
     public GameObject uiPanel; // Celý panel s ikonkou 'E'
-    public TextMeshProUGUI actionText; // Volitelné: Text jako "Sebrat", "Otevøít"
 
     private Camera mainCam;
     private Transform targetTransform;
@@ -33,11 +31,10 @@ public class InteractionPromptUI : MonoBehaviour
         }
     }
 
-    public void Show(Transform target, string text = "Interact")
+    // Odstranìn parametr pro text, teï pøijímá jen cíl (Transform)
+    public void Show(Transform target)
     {
         targetTransform = target;
-        if (actionText != null) actionText.text = text;
-
         uiPanel.SetActive(true);
     }
 

@@ -54,15 +54,8 @@ public class SmartTrain : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPoint.position) < 0.2f)
         {
             StationPoint station = targetPoint.GetComponent<StationPoint>();
-
-            if (station != null)
-            {
-                StartCoroutine(StopAtStation(station));
-            }
-            else
-            {
-                GoToNextPoint();
-            }
+            if (station != null) StartCoroutine(StopAtStation(station));
+            else GoToNextPoint();
         }
     }
 
@@ -76,12 +69,9 @@ public class SmartTrain : MonoBehaviour
     {
         isStopped = true;
         currentExitPoint = station.exitPoint;
-
         yield return new WaitForSeconds(station.waitTime);
-
         currentExitPoint = null;
         isStopped = false;
-
         GoToNextPoint();
     }
 }

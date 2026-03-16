@@ -34,13 +34,13 @@ public class InventoryItemData : ScriptableObject
     public float attackCooldown = 0.6f;
 
     [Header("Prefabs")]
-    public GameObject WeaponInHandPrefab;
+    public GameObject ItemInHandPrefab;
 
-
+    [Header("Audio")]
+    public AudioClip useSound;
 
     public void UseItem(PlayerNeeds playerNeeds)
     {
-
         switch (itemType)
         {
             case ItemType.Food:
@@ -56,7 +56,7 @@ public class InventoryItemData : ScriptableObject
                     playerNeeds.ModifyThirst(thirstRestore);
                     TutorialManager tutorial = FindObjectOfType<TutorialManager>();
                     if (tutorial != null)
-                    tutorial.MarkStepComplete("drinkRum");
+                        tutorial.MarkStepComplete("drinkRum");
                 }
                 break;
 
@@ -65,4 +65,3 @@ public class InventoryItemData : ScriptableObject
         }
     }
 }
-    

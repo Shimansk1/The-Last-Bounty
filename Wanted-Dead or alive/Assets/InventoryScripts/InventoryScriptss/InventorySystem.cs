@@ -9,7 +9,6 @@ public class InventorySystem
 {
     [SerializeField] private List<InventorySlot> inventorySlots;
 
-
     public List<InventorySlot> InventorySlots => inventorySlots;
     public int InventorySize => InventorySlots.Count;
 
@@ -24,11 +23,12 @@ public class InventorySystem
             inventorySlots.Add(new InventorySlot());
         }
     }
+
     public bool AddToInventory(InventoryItemData itemToAdd, int amountToAdd)
     {
-        if (ContainsItem(itemToAdd, out List<InventorySlot> invSlot)) //check whether item exists in inventory
+        if (ContainsItem(itemToAdd, out List<InventorySlot> invSlot))
         {
-            foreach(var slot in invSlot)
+            foreach (var slot in invSlot)
             {
                 if (slot.RoomLeftInStack(amountToAdd))
                 {
@@ -38,7 +38,7 @@ public class InventorySystem
                 }
             }
         }
-        if (HasFreeSlot(out InventorySlot freeSlot)) //gets the first avalaible slot
+        if (HasFreeSlot(out InventorySlot freeSlot))
         {
             freeSlot.UpdateInventorySlot(itemToAdd, amountToAdd);
             OnInventorySlotChanged?.Invoke(freeSlot);
@@ -50,13 +50,35 @@ public class InventorySystem
     public bool ContainsItem(InventoryItemData itemToAdd, out List<InventorySlot> invSlot)
     {
         invSlot = inventorySlots.Where(i => i.ItemData == itemToAdd).ToList();
-
-        return invSlot == null ? false : true;
+        return invSlot.Count > 0;
     }
 
     public bool HasFreeSlot(out InventorySlot freeSlot)
     {
         freeSlot = inventorySlots.FirstOrDefault(i => i.ItemData == null);
-        return freeSlot == null ? false : true;
+        return freeSlot != null;
+    }
+
+    public bool RemoveFromInventory(InventoryItemData itemToRemove, int amountToRemove)
+    {
+        if (ContainsItem(itemToRemove, out List<InventorySlot> invSlot))
+        {
+            foreach (var slot in invSlot)
+            {
+                if (slot.StackSize >= amountToRemove)
+                {
+                    slot.RemoveFromStack(amountToRemove);
+                    OnInventorySlotChanged?.Invoke(slot);
+                    return true;
+                }
+                else
+                {
+                    amountToRemove -= slot.StackSize;
+                    slot.ClearSlot();
+                    OnInventorySlotChanged?.Invoke(slot);
+                }
+            }
+        }
+        return false;
     }
 }

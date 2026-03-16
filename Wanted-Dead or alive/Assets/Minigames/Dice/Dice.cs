@@ -3,13 +3,13 @@ using UnityEngine;
 public class Dice : MonoBehaviour
 {
     private Rigidbody rb;
-
-    [Header("Stav kostky")]
     public int diceValue = 0;
     public bool hasStopped = false;
-
-    [Tooltip("Sem pøetáhni tìch 6 prázdných objektù (1 až 6) z hierarchie kostky")]
     public Transform[] sides;
+
+    // NOVÉ: Èasovaè, aby kostka nevyhodnotila padnutí ve vzduchu
+    private float stopTimer = 0f;
+    public float requiredStopTime = 0.5f;
 
     void Start()
     {
@@ -18,10 +18,13 @@ public class Dice : MonoBehaviour
 
     void Update()
     {
-        // Kontrola, jestli už kostka pøestala skákat a rotovat
-        if (rb.velocity.sqrMagnitude < 0.01f && rb.angularVelocity.sqrMagnitude < 0.01f)
+        // Pokud je kostka skoro v klidu...
+        if (rb.velocity.magnitude < 0.05f && rb.angularVelocity.magnitude < 0.05f)
         {
-            if (!hasStopped)
+            stopTimer += Time.deltaTime; // ...zaèneme poèítat èas
+
+            // Až když je v klidu déle než pùl vteøiny, vyhodnotíme ji
+            if (stopTimer >= requiredStopTime && !hasStopped)
             {
                 hasStopped = true;
                 CalculateValue();
@@ -29,8 +32,10 @@ public class Dice : MonoBehaviour
         }
         else
         {
+            // Pokud se kostka zase pohne (odraz), èasovaè se resetuje
+            stopTimer = 0f;
             hasStopped = false;
-            diceValue = 0; // Dokud se hejbe, hodnota je 0
+            diceValue = 0;
         }
     }
 
@@ -39,7 +44,6 @@ public class Dice : MonoBehaviour
         float highestY = float.MinValue;
         Transform highestSide = null;
 
-        // Projde všech 6 stran a najde tu, co je nejvýš
         foreach (Transform side in sides)
         {
             if (side.position.y > highestY)
@@ -49,11 +53,28 @@ public class Dice : MonoBehaviour
             }
         }
 
-        // Z názvu toho nejvyššího bodu zjistíme èíslo (proto jsme je pojmenovali 1, 2, 3...)
         if (highestSide != null)
         {
-            int.TryParse(highestSide.name, out diceValue);
-            Debug.Log("Kostka se zastavila na èísle: " + diceValue);
+            string name = highestSide.name;
+            int foundValue = 0;
+
+            foreach (char c in name)
+            {
+                if (char.IsDigit(c))
+                {
+                    foundValue = int.Parse(c.ToString());
+                    break;
+                }
+            }
+
+            if (foundValue > 0 && foundValue <= 6)
+            {
+                diceValue = foundValue;
+            }
+            else
+            {
+                diceValue = 1;
+            }
         }
     }
 }

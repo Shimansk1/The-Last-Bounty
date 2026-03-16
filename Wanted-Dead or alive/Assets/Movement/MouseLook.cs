@@ -8,7 +8,7 @@ public class MouseLook : MonoBehaviour
     public Transform PlayerBody;
 
     private float xRotation = 0f;
-    public bool canMove = true; // Nová promìnná pro povolení pohybu kamery
+    public bool canMove = true; 
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        if (!canMove) return; // Pokud není povolen pohyb, ukonèíme Update
+        if (!canMove) return;
 
         float MouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;

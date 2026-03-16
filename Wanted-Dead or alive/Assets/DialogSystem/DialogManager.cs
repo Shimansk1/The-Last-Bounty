@@ -2,24 +2,45 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class DialogManager : MonoBehaviour
 {
-    public static DialogManager Instance; // Jednoduchý singleton
+    public static DialogManager Instance;
 
-    [Header("UI Elements")]
-    public GameObject dialogPanel; // Celé okno dialogu
+    public GameObject dialogPanel;
     public TextMeshProUGUI npcNameText;
     public TextMeshProUGUI dialogText;
-    public Transform responseButtonContainer; // Kam se budou spawnovat tlaèítka
-    public GameObject responseButtonPrefab;   // Prefab tlaèítka
+    public Transform responseButtonContainer;
+    public GameObject responseButtonPrefab;
 
     private NPCController currentNPC;
+    private PlayerMovementScript player;
+    private Interactor playerInteractor;
+    private MouseLook mouseLook;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         dialogPanel.SetActive(false);
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerMovementScript>();
+        playerInteractor = FindObjectOfType<Interactor>();
+        mouseLook = FindObjectOfType<MouseLook>();
+    }
+
+    private void Update()
+    {
+        if (dialogPanel != null && dialogPanel.activeSelf)
+        {
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                CloseDialog(true);
+            }
+        }
     }
 
     public void StartDialog(NPCController npc, DialogNode node)
@@ -28,6 +49,12 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(true);
         npcNameText.text = npc.npcName;
 
+        if (player != null) player.canMove = false;
+        if (mouseLook != null) mouseLook.canMove = false;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         ShowNode(node);
     }
 
@@ -35,39 +62,63 @@ public class DialogManager : MonoBehaviour
     {
         dialogText.text = node.dialogText;
 
-        // Vyèistit stará tlaèítka
+        PlayerInventoryHolder inventory = FindObjectOfType<PlayerInventoryHolder>();
+
         foreach (Transform child in responseButtonContainer) Destroy(child.gameObject);
 
-        // Vytvoøit nová tlaèítka podle možností
         foreach (var response in node.responses)
         {
+            // Kontrola Itemu
+            if (response.requiredItemToClick != null)
+            {
+                if (inventory == null || !inventory.HasItem(response.requiredItemToClick))
+                {
+                    continue;
+                }
+            }
+
+            // NOVÉ: Kontrola Reputace
+            if (response.requiredReputation > 0f)
+            {
+                if (ReputationManager.Instance == null || ReputationManager.Instance.GetReputation(response.reputationCity) < response.requiredReputation)
+                {
+                    continue; // Hráè nemá dost reputace, tlaèítko se neukáže
+                }
+            }
+
             GameObject btn = Instantiate(responseButtonPrefab, responseButtonContainer);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
 
-            // Nastavení kliknutí
             btn.GetComponent<Button>().onClick.AddListener(() =>
             {
+                if (response.removesItemOnSubmit && response.requiredItemToClick != null)
+                {
+                    if (inventory != null) inventory.RemoveFromInventory(response.requiredItemToClick, 1);
+                }
+
+                if (response.advancesStory && MainStoryManager.Instance != null)
+                {
+                    MainStoryManager.Instance.AdvanceStory(response.storyStateToSet);
+                }
+
                 if (response.isExit)
                 {
-                    CloseDialog();
+                    CloseDialog(true);
                 }
                 else if (response.triggersShop)
                 {
-                    // --- OPRAVA ZAÈÍNÁ ZDE ---
-
-                    // 1. Uložíme si odkaz na NPC bokem, než ho CloseDialog vymaže
                     NPCController shopNPC = currentNPC;
-
-                    // 2. Teï mùžeme bezpeènì zavøít dialog (currentNPC se stane null)
-                    CloseDialog();
-
-                    // 3. Otevøeme obchod pøes tu naši uloženou promìnnou
-                    if (shopNPC != null)
+                    CloseDialog(false);
+                    if (shopNPC != null) shopNPC.OpenShop();
+                }
+                else if (response.triggersDuel)
+                {
+                    NPCController duelNPC = currentNPC;
+                    CloseDialog(false);
+                    if (duelNPC != null && DuelManager.Instance != null)
                     {
-                        shopNPC.OpenShop();
+                        DuelManager.Instance.StartDuelSetup(duelNPC);
                     }
-
-                    // --- OPRAVA KONÈÍ ZDE ---
                 }
                 else if (response.nextNode != null)
                 {
@@ -77,17 +128,31 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void CloseDialog()
+    public void CloseDialog(bool fullyExit = true)
     {
         dialogPanel.SetActive(false);
 
-        // Dùležité: Øíct hráèi, že interakce skonèila, aby se schovala myš
-        // Musíš najít referenci na hráèe/Interactor a zavolat EndInteraction, 
-        // nebo v Interactoru hlídat stisk ESC (což tam už máš).
-
-        if (currentNPC != null)
+        if (fullyExit)
         {
-            currentNPC.EndInteraction();
+            if (player != null) player.canMove = true;
+            if (mouseLook != null) mouseLook.canMove = true;
+
+            if (playerInteractor != null)
+            {
+                playerInteractor.EndInteraction();
+            }
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+
+            if (currentNPC != null)
+            {
+                currentNPC.EndInteraction();
+                currentNPC = null;
+            }
+        }
+        else
+        {
             currentNPC = null;
         }
     }

@@ -3,8 +3,8 @@ using UnityEngine;
 public class TrainDoor : MonoBehaviour
 {
     [Header("Nastavení")]
-    public TrainWagon myWagon;        // Odkaz na vagón
-    public Transform onboardPosition; // Kam teleportovat
+    public TrainWagon myWagon;
+    public Transform onboardPosition;
 
     private GameObject player;
     private bool isPlayerClose = false;
@@ -23,18 +23,14 @@ public class TrainDoor : MonoBehaviour
 
         CharacterController cc = player.GetComponentInParent<CharacterController>();
 
-        // 1. BLIK - Vypneme CC, aby šel hráè teleportovat
         if (cc != null) cc.enabled = false;
 
-        // 2. Teleport
         Transform targetTransform = (cc != null) ? cc.transform : player.transform;
         targetTransform.position = onboardPosition.position;
         targetTransform.rotation = onboardPosition.rotation;
 
-        // 3. BLIK - Hned ho zase ZAPNEME (jak jsi chtìl)
         if (cc != null) cc.enabled = true;
 
-        // 4. Pøedáme hráèe vagónu (ten vypne jen PlayerMovementScript)
         if (myWagon != null)
         {
             myWagon.LockPlayer(player);

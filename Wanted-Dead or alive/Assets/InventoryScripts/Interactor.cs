@@ -10,7 +10,7 @@ public class Interactor : MonoBehaviour
     public float InteractionPointRadius = 1f;
 
     [Header("UI Reference")]
-    public InteractionPromptUI promptUI; 
+    public InteractionPromptUI promptUI;
 
     public bool IsInteracting { get; private set; }
     [SerializeField] private MouseLook mouseLook;
@@ -19,9 +19,18 @@ public class Interactor : MonoBehaviour
 
     private void Update()
     {
+        // Pokud jsme v UI panelu, èekáme jen na Escape
+        if (IsInteracting)
+        {
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                EndInteraction();
+            }
+            return;
+        }
 
         var colliders = Physics.OverlapSphere(InteractionPoint.position, InteractionPointRadius, InteractionLayer);
-        
+
         IInteractable closestInteractable = null;
         float closestDistance = float.MaxValue;
 
@@ -42,12 +51,16 @@ public class Interactor : MonoBehaviour
         if (closestInteractable != null)
         {
             currentInteractable = closestInteractable;
-            
+            var interactableObject = closestInteractable as MonoBehaviour;
 
-            var interactableObject = closestInteractable as MonoBehaviour; 
             if (interactableObject != null && promptUI != null)
             {
                 promptUI.Show(interactableObject.transform);
+            }
+
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                StartInteraction(currentInteractable);
             }
         }
         else
@@ -55,45 +68,40 @@ public class Interactor : MonoBehaviour
             currentInteractable = null;
             if (promptUI != null) promptUI.Hide();
         }
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            if (currentInteractable != null)
-            {
-                if (currentInteractable.RequiresCursorLock)
-                {
-                    mouseLook.canMove = false;
-                    Cursor.visible = true;
-                    Cursor.lockState = CursorLockMode.None;
-                }
-
-                StartInteraction(currentInteractable);
-            }
-        }
-
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && IsInteracting)
-        {
-            EndInteraction();
-        }
     }
 
     void StartInteraction(IInteractable interactable)
     {
+        // Schováme 'E' pøi startu jakékoliv interakce
+        if (promptUI != null) promptUI.Hide();
+
+        // Provedeme samotnou interakci
         interactable.Interact(this, out bool interactSuccesful);
-        IsInteracting = true;
 
         TutorialManager tutorial = FindObjectOfType<TutorialManager>();
-        if (tutorial != null)
-            tutorial.MarkStepComplete("openChest");
-            
-        if (promptUI != null) promptUI.Hide();
+        if (tutorial != null) tutorial.MarkStepComplete("openChest");
+
+        // ROZHODNUTÍ: Je to panel (vyžaduje kurzor), nebo instantní akce?
+        if (interactable.RequiresCursorLock)
+        {
+            // Jde o panel/inventáø -> Zablokujeme hráèe a ukážeme kurzor
+            IsInteracting = true;
+            if (mouseLook != null) mouseLook.canMove = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            // Jde o studnu, konì atd. -> Necháme IsInteracting na false!
+            // Hráè mùže hned hrát dál a maèkat E znova.
+        }
     }
 
-    void EndInteraction()
+    public void EndInteraction()
     {
         IsInteracting = false;
         Cursor.visible = false;
-        mouseLook.canMove = true;
+        if (mouseLook != null) mouseLook.canMove = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }

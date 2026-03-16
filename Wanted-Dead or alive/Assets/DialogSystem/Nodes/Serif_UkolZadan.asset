@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8539c1127e5b8cb4cb5b35faffb11f0a, type: 3}
+  m_Name: Serif_UkolZadan
+  m_EditorClassIdentifier: 
+  dialogText: "EL DIABLA!? Na to si nejdr\xEDv mus\xED\u0161 z\xEDskat mou d\u016Fv\u011Bru,
+    b\u011B\u017E vy\u010Distit d\u016Fl na severoz\xE1pad\u011B"
+  responses:
+  - responseText: "Dob\u0159e, ten d\u016Fl vy\u010Dist\xEDm. (Odej\xEDt)"
+    nextNode: {fileID: 0}
+    triggersShop: 0
+    isExit: 1
+    triggersDuel: 0
+    advancesStory: 1
+    storyStateToSet: 1

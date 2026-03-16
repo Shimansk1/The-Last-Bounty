@@ -14,17 +14,39 @@ public class WeaponHandler : MonoBehaviour
     private float lastAttackTime;
     private AudioSource weaponAudioSource;
 
+    [Header("Visual Effects General")]
+    public float recoilAmount = 0.1f;
+    public float recoilRecoverSpeed = 5f;
+    public float meleeThrustAmount = 0.2f;
+
+    public GameObject bloodEffectPrefab;
+
     [Header("Projectile settings")]
     public GameObject bulletPrefab;
-    public Transform firePoint;
     public float bulletSpeed = 30f;
 
-    [Header("Sound Effects")]
-    public AudioClip weaponSwingSound;
-    public AudioClip flintlockShotSound;
+    [Header("--- REVOLVER SETTINGS ---")]
+    public Transform revolverFirePoint;
+    public GameObject revolverMuzzleFlash;
+    public AudioClip revolverShotSound;
+
+    [Header("--- RIFLE SETTINGS ---")]
+    public Transform rifleFirePoint;
+    public GameObject rifleMuzzleFlash;
+    public AudioClip rifleShotSound;
+
+    [Header("Melee Sound Effects")]
+    public AudioClip[] weaponSwingSounds;
+
+    private Vector3 originalWeaponPos;
 
     void Start()
     {
+        if (weaponHolder != null)
+        {
+            originalWeaponPos = weaponHolder.localPosition;
+        }
+
         if (crosshairUI != null) crosshairUI.SetActive(false);
 
         if (weaponHolder == null) return;
@@ -36,21 +58,22 @@ public class WeaponHandler : MonoBehaviour
         }
     }
 
-    public void EquipWeapon(InventoryItemData newWeapon)
+    public void EquipItem(InventoryItemData newItem)
     {
-        if (currentWeapon == newWeapon) return;
+        if (currentWeapon == newItem) return;
 
         UnequipWeapon();
 
-        if (newWeapon.itemType != ItemType.Weapon) return;
+        currentWeapon = newItem;
 
-        currentWeapon = newWeapon;
-
-        if (crosshairUI != null) crosshairUI.SetActive(true);
-
-        if (newWeapon.WeaponInHandPrefab != null)
+        if (crosshairUI != null)
         {
-            currentWeaponObj = Instantiate(newWeapon.WeaponInHandPrefab, weaponHolder);
+            crosshairUI.SetActive(newItem.itemType == ItemType.Weapon);
+        }
+
+        if (newItem.ItemInHandPrefab != null)
+        {
+            currentWeaponObj = Instantiate(newItem.ItemInHandPrefab, weaponHolder);
             currentWeaponObj.transform.localPosition = Vector3.zero;
             currentWeaponObj.transform.localRotation = Quaternion.identity;
 
@@ -81,7 +104,12 @@ public class WeaponHandler : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + currentWeapon.attackCooldown)
+        if (weaponHolder != null)
+        {
+            weaponHolder.localPosition = Vector3.Lerp(weaponHolder.localPosition, originalWeaponPos, Time.deltaTime * recoilRecoverSpeed);
+        }
+
+        if (Input.GetMouseButtonDown(0) && currentWeapon.itemType == ItemType.Weapon && Time.time >= lastAttackTime + currentWeapon.attackCooldown)
         {
             Attack();
         }
@@ -93,12 +121,32 @@ public class WeaponHandler : MonoBehaviour
 
         if (currentWeapon.weaponRange >= 20)
         {
-            if (flintlockShotSound != null) weaponAudioSource.PlayOneShot(flintlockShotSound);
-            ShootVisualProjectile();
+            bool isRifle = currentWeapon.name.ToLower().Contains("rifle") || currentWeapon.name.ToLower().Contains("puska");
+
+            Transform activeFirePoint = isRifle ? rifleFirePoint : revolverFirePoint;
+            GameObject activeMuzzleFlash = isRifle ? rifleMuzzleFlash : revolverMuzzleFlash;
+            AudioClip activeShotSound = isRifle ? rifleShotSound : revolverShotSound;
+
+            if (activeShotSound != null) weaponAudioSource.PlayOneShot(activeShotSound);
+
+            ApplyRecoil();
+            SpawnMuzzleFlash(activeMuzzleFlash, activeFirePoint);
+            ShootVisualProjectile(activeFirePoint);
         }
         else
         {
-            if (weaponSwingSound != null) weaponAudioSource.PlayOneShot(weaponSwingSound);
+            if (weaponSwingSounds != null && weaponSwingSounds.Length > 0)
+            {
+                int randomIndex = Random.Range(0, weaponSwingSounds.Length);
+                AudioClip randomSound = weaponSwingSounds[randomIndex];
+
+                if (randomSound != null)
+                {
+                    weaponAudioSource.PlayOneShot(randomSound);
+                }
+            }
+
+            ApplyMeleeThrust();
         }
 
         LayerMask hitMask = enemyLayer | targetLayer;
@@ -109,6 +157,12 @@ public class WeaponHandler : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(currentWeapon.weaponDamage);
+
+                if (bloodEffectPrefab != null)
+                {
+                    GameObject blood = Instantiate(bloodEffectPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(blood, 2f);
+                }
             }
 
             BottleTarget bottle = hit.collider.GetComponent<BottleTarget>();
@@ -124,9 +178,34 @@ public class WeaponHandler : MonoBehaviour
         }
     }
 
-    void ShootVisualProjectile()
+    void SpawnMuzzleFlash(GameObject flashPrefab, Transform fp)
     {
-        if (bulletPrefab != null && firePoint != null)
+        if (flashPrefab != null && fp != null)
+        {
+            GameObject flash = Instantiate(flashPrefab, fp.position, fp.rotation);
+            Destroy(flash, 2f);
+        }
+    }
+
+    void ApplyRecoil()
+    {
+        if (weaponHolder != null)
+        {
+            weaponHolder.localPosition -= Vector3.forward * recoilAmount;
+        }
+    }
+
+    void ApplyMeleeThrust()
+    {
+        if (weaponHolder != null)
+        {
+            weaponHolder.localPosition += Vector3.forward * meleeThrustAmount;
+        }
+    }
+
+    void ShootVisualProjectile(Transform fp)
+    {
+        if (bulletPrefab != null && fp != null)
         {
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
@@ -136,7 +215,7 @@ public class WeaponHandler : MonoBehaviour
             if (Physics.Raycast(ray, out hit, currentWeapon.weaponRange))
             {
                 targetPoint = hit.point;
-                distanceToTarget = Vector3.Distance(firePoint.position, hit.point);
+                distanceToTarget = Vector3.Distance(fp.position, hit.point);
             }
             else
             {
@@ -144,9 +223,9 @@ public class WeaponHandler : MonoBehaviour
                 distanceToTarget = currentWeapon.weaponRange;
             }
 
-            Vector3 directionToTarget = (targetPoint - firePoint.position).normalized;
+            Vector3 directionToTarget = (targetPoint - fp.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(directionToTarget));
+            GameObject bullet = Instantiate(bulletPrefab, fp.position, Quaternion.LookRotation(directionToTarget));
 
             BulletMover mover = bullet.AddComponent<BulletMover>();
             mover.direction = directionToTarget;

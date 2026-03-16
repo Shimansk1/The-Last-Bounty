@@ -21,18 +21,15 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         base.Start();
 
-        // Bezpeènostní kontroly...
         if (slots == null || slots.Length == 0) return;
         _maxIndexSize = slots.Length - 1;
 
         playerNeeds = FindObjectOfType<PlayerNeeds>();
         weaponHandler = FindObjectOfType<WeaponHandler>();
 
-        // Inicializace prvního slotu
         _currentIndex = 0;
         slots[_currentIndex].ToggleHighlight();
 
-        // --- TOTO JE NOVÉ: Hned na startu zkontrolujeme, co držíme ---
         UpdateActiveSlot();
     }
 
@@ -40,7 +37,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         base.OnEnable();
         _playerControls.Enable();
-        // Eventy pro èísla...
+
         _playerControls.Player.Hotbar1.performed += ctx => SetIndex(0);
         _playerControls.Player.Hotbar2.performed += ctx => SetIndex(1);
         _playerControls.Player.Hotbar3.performed += ctx => SetIndex(2);
@@ -59,7 +56,6 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         base.OnDisable();
         _playerControls.Disable();
-        // Odhlášení eventù... (zjednodušeno pro pøehlednost, nech tam to svoje)
         _playerControls.Player.UseItem.performed -= UseItem;
     }
 
@@ -70,67 +66,46 @@ public class HotbarDisplay : StaticInventoryDisplay
         if (scroll < -0.01f) ChangeIndex(1);
     }
 
-    // --- NOVÁ METODA: Øeší automatické nasazování vìcí pøi zmìnì slotu ---
     private void UpdateActiveSlot()
     {
-        // Pokud nemáme weapon handler, nemáme co øešit
         if (weaponHandler == null) return;
 
-        // Získáme data ze slotu
         var currentSlot = slots[_currentIndex].AssignedInventorySlot;
 
-        // Pokud je slot prázdný nebo item je null
         if (currentSlot == null || currentSlot.ItemData == null)
         {
-            weaponHandler.UnequipWeapon(); // Nic nedržíme -> odvybavit zbraò
+            weaponHandler.UnequipWeapon();
             return;
         }
 
         InventoryItemData item = currentSlot.ItemData;
-
-        // Pokud je to zbraò, automaticky ji nasadíme
-        if (item.itemType == ItemType.Weapon)
-        {
-            weaponHandler.EquipWeapon(item);
-        }
-        else
-        {
-            // Pokud držíme jablko nebo kámen, schováme pistoli
-            weaponHandler.UnequipWeapon();
-        }
+        weaponHandler.EquipItem(item);
     }
 
-    // Upravená metoda pro zmìnu indexu (koleèko myši)
     private void ChangeIndex(int direction)
     {
-        slots[_currentIndex].ToggleHighlight(); // Zhasnout starý
+        slots[_currentIndex].ToggleHighlight();
         _currentIndex += direction;
 
         if (_currentIndex > _maxIndexSize) _currentIndex = 0;
         else if (_currentIndex < 0) _currentIndex = _maxIndexSize;
 
-        slots[_currentIndex].ToggleHighlight(); // Rozsvítit nový
+        slots[_currentIndex].ToggleHighlight();
 
-        // --- ZAVOLAT UPDATE AKTIVNÍHO ITEMU ---
         UpdateActiveSlot();
     }
 
-    // Upravená metoda pro nastavení indexu (klávesy 1-9)
     private void SetIndex(int newIndex)
     {
-        slots[_currentIndex].ToggleHighlight(); // Zhasnout starý
+        slots[_currentIndex].ToggleHighlight();
         _currentIndex = Mathf.Clamp(newIndex, 0, _maxIndexSize);
-        slots[_currentIndex].ToggleHighlight(); // Rozsvítit nový
+        slots[_currentIndex].ToggleHighlight();
 
-        // --- ZAVOLAT UPDATE AKTIVNÍHO ITEMU ---
         UpdateActiveSlot();
     }
 
     private void UseItem(InputAction.CallbackContext obj)
     {
-        // Tady øešíme POUZE konzumaci jídla/pití.
-        // Zbranì už øeší WeaponHandler.Update() a HotbarDisplay.UpdateActiveSlot()
-
         var currentSlot = slots[_currentIndex].AssignedInventorySlot;
         if (currentSlot == null || currentSlot.ItemData == null) return;
 
@@ -142,11 +117,15 @@ public class HotbarDisplay : StaticInventoryDisplay
             case ItemType.Drink:
                 if (playerNeeds != null)
                 {
+                    if (item.useSound != null && Camera.main != null)
+                    {
+                        AudioSource.PlayClipAtPoint(item.useSound, Camera.main.transform.position);
+                    }
+
                     item.UseItem(playerNeeds);
                     currentSlot.RemoveFromStack(1);
                     slots[_currentIndex].UpdateUISlot();
 
-                    // Pokud jsme snìdli poslední kus, musíme aktualizovat co držíme (aby zmizela tøeba prázdná láhev, kdyby to byl model)
                     if (currentSlot.StackSize <= 0)
                     {
                         UpdateActiveSlot();
@@ -154,13 +133,10 @@ public class HotbarDisplay : StaticInventoryDisplay
                 }
                 break;
 
-            // CASE WEAPON JSME VYHODILI - Zbraò se "nepoužívá" kliknutím v inventáøi, ale støílí se s ní
             case ItemType.Weapon:
-                // Zde nedìláme nic, støelbu øeší WeaponHandler
                 break;
 
             default:
-                Debug.Log("Item used (generic)");
                 break;
         }
     }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478593355f2cfc44b84f33643f7e4e00, type: 3}
+  m_Name: QuestItem_ZlataCihla
+  m_EditorClassIdentifier: 
+  ID: 21
+  DisplayName: "Zlat\xE1 cihla"
+  Description: gold ingot
+  Icon: {fileID: 21300000, guid: 7871bb5c10e303848b7a398be999c612, type: 3}
+  MaxStackSize: 1
+  MoneyValue: 0
+  ItemPrefab: {fileID: 1583055891871153019, guid: 51de69f65ee74f84885e1d192b607bc9, type: 3}
+  itemType: 5
+  hungerRestore: 1
+  thirstRestore: 1
+  weaponDamage: 0
+  weaponRange: 0
+  attackCooldown: 0
+  ItemInHandPrefab: {fileID: 1558482983724844, guid: a6dab281240c0aa469f73471d565fec1, type: 3}
+  useSound: {fileID: 0}

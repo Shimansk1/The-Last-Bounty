@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478593355f2cfc44b84f33643f7e4e00, type: 3}
+  m_Name: Beans
+  m_EditorClassIdentifier: 
+  ID: 5
+  DisplayName: Beans
+  Description: Beans
+  Icon: {fileID: 21300000, guid: c8542e1431770434b9be52ff6f0dd69c, type: 3}
+  MaxStackSize: 10
+  MoneyValue: 150
+  ItemPrefab: {fileID: 7105458224088690797, guid: 19a0a5352e8e99e45a243e168d2ab768, type: 3}
+  itemType: 0
+  hungerRestore: 50
+  thirstRestore: 0
+  weaponDamage: 0
+  weaponRange: 0
+  attackCooldown: 0
+  ItemInHandPrefab: {fileID: 1779384929627366, guid: 6a789fbc8e00f5c4f8b86941aa0a165e, type: 3}
+  useSound: {fileID: 8300000, guid: a0ed95cd8655cc34b99cf316bcefc53d, type: 3}

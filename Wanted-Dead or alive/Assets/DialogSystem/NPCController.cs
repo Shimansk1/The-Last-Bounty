@@ -1,15 +1,30 @@
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections.Generic; // Potøeba pro List
+using System.Collections.Generic;
+
+[System.Serializable]
+public struct StoryDialog
+{
+    public StoryProgress requiredProgress;
+    public DialogNode dialogNode;
+}
 
 public class NPCController : MonoBehaviour, IInteractable
 {
     [Header("Data")]
     public string npcName = "Obchodník";
-    public DialogNode startingDialog;
+    public CityName currentCity;
+
+    [Header("Pøíbìh a Duel")]
+    [Tooltip("Je tento NPC souèástí hlavního pøíbìhového duelu?")]
+    public bool isMainStoryDuelist = false;
+
+    [Header("Dialogy")]
+    public DialogNode defaultDialog;
+    public List<StoryDialog> storyDialogs;
 
     [Header("Obchod")]
-    public List<InventoryItemData> shopInventory; // SEM pøetáhneš itemy v Inspectoru
+    public List<InventoryItemData> shopInventory;
 
     public UnityAction<IInteractable> OnInteractionComplete { get; set; }
 
@@ -18,25 +33,37 @@ public class NPCController : MonoBehaviour, IInteractable
     public void Interact(Interactor interactor, out bool interactSuccesful)
     {
         interactSuccesful = true;
-        DialogManager.Instance.StartDialog(this, startingDialog);
+        DialogNode dialogToShow = defaultDialog;
+
+        if (MainStoryManager.Instance != null && storyDialogs.Count > 0)
+        {
+            StoryProgress currentProgress = MainStoryManager.Instance.currentState;
+
+            foreach (var sd in storyDialogs)
+            {
+                if (sd.requiredProgress == currentProgress)
+                {
+                    dialogToShow = sd.dialogNode;
+                    break;
+                }
+            }
+        }
+
+        if (dialogToShow != null)
+        {
+            DialogManager.Instance.StartDialog(this, dialogToShow);
+        }
     }
 
     public void EndInteraction()
     {
-        Debug.Log("Konec interakce");
     }
 
-    // TOTO SE ZAVOLÁ Z DIALOG MANAGERU (když klikneš na odpovìï s triggersShop = true)
     public void OpenShop()
     {
-        Debug.Log("Otevírám obchod...");
         if (shopInventory != null && shopInventory.Count > 0)
         {
             ShopManager.Instance.OpenShop(shopInventory);
-        }
-        else
-        {
-            Debug.LogWarning("Tohle NPC nic neprodává!");
         }
     }
 }

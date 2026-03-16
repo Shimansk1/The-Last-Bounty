@@ -7,11 +7,20 @@ public class Canteen : MonoBehaviour
     public float drinkAmount = 25f;
     public int thirstRestoreAmount = 20;
 
+    public AudioClip drinkSound;
+
     private PlayerNeeds playerNeeds;
+    private AudioSource audioSource;
 
     void Start()
     {
         playerNeeds = GetComponent<PlayerNeeds>();
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     public bool Drink()
@@ -19,6 +28,11 @@ public class Canteen : MonoBehaviour
         if (waterAmount >= drinkAmount)
         {
             waterAmount -= drinkAmount;
+
+            if (drinkSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(drinkSound);
+            }
 
             if (playerNeeds != null)
             {

@@ -9,7 +9,6 @@ public class PlayerInventoryHolder : InventoryHolder
     [SerializeField] private MouseLook mouseLook;
 
     public static UnityAction OnPlayerInventoryChanged;
-
     public static UnityAction<InventorySystem, int> OnPlayerInventoryDisplayRequested;
 
     private bool isInventoryOpen = false;
@@ -57,6 +56,16 @@ public class PlayerInventoryHolder : InventoryHolder
             return true;
         }
         return false;
+    }
+
+    public bool HasItem(InventoryItemData item)
+    {
+        return primaryInventorySystem.ContainsItem(item, out _);
+    }
+
+    public bool RemoveFromInventory(InventoryItemData item, int amount)
+    {
+        return primaryInventorySystem.RemoveFromInventory(item, amount);
     }
 
     [Header("Ekonomika")]
